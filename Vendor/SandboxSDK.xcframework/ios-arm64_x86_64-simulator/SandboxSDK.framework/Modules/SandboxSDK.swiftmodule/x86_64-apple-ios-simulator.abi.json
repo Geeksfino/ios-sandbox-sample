@@ -1,0 +1,1596 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "SandboxSDK",
+    "printedName": "SandboxSDK",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SandboxSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "SandboxSDKFFI",
+        "printedName": "SandboxSDKFFI",
+        "declKind": "Import",
+        "moduleName": "SandboxSDK",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SandboxError",
+        "printedName": "SandboxError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "runtime",
+            "printedName": "runtime",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SandboxSDK.SandboxError.Type) -> (Swift.String) -> SandboxSDK.SandboxError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> SandboxSDK.SandboxError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SandboxError",
+                        "printedName": "SandboxSDK.SandboxError",
+                        "usr": "s:10SandboxSDK0A5ErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SandboxSDK.SandboxError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SandboxError",
+                        "printedName": "SandboxSDK.SandboxError",
+                        "usr": "s:10SandboxSDK0A5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10SandboxSDK0A5ErrorO7runtimeyACSScACmF",
+            "mangledName": "$s10SandboxSDK0A5ErrorO7runtimeyACSScACmF",
+            "moduleName": "SandboxSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "description",
+            "printedName": "description",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10SandboxSDK0A5ErrorO11descriptionSSvp",
+            "mangledName": "$s10SandboxSDK0A5ErrorO11descriptionSSvp",
+            "moduleName": "SandboxSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SandboxSDK0A5ErrorO11descriptionSSvg",
+                "mangledName": "$s10SandboxSDK0A5ErrorO11descriptionSSvg",
+                "moduleName": "SandboxSDK",
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:10SandboxSDK0A5ErrorO",
+        "mangledName": "$s10SandboxSDK0A5ErrorO",
+        "moduleName": "SandboxSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DecisionStatus",
+        "printedName": "DecisionStatus",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "allowed",
+            "printedName": "allowed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SandboxSDK.DecisionStatus.Type) -> SandboxSDK.DecisionStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DecisionStatus",
+                    "printedName": "SandboxSDK.DecisionStatus",
+                    "usr": "s:10SandboxSDK14DecisionStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SandboxSDK.DecisionStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DecisionStatus",
+                        "printedName": "SandboxSDK.DecisionStatus",
+                        "usr": "s:10SandboxSDK14DecisionStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10SandboxSDK14DecisionStatusO7allowedyA2CmF",
+            "mangledName": "$s10SandboxSDK14DecisionStatusO7allowedyA2CmF",
+            "moduleName": "SandboxSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "ask",
+            "printedName": "ask",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SandboxSDK.DecisionStatus.Type) -> SandboxSDK.DecisionStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DecisionStatus",
+                    "printedName": "SandboxSDK.DecisionStatus",
+                    "usr": "s:10SandboxSDK14DecisionStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SandboxSDK.DecisionStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DecisionStatus",
+                        "printedName": "SandboxSDK.DecisionStatus",
+                        "usr": "s:10SandboxSDK14DecisionStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10SandboxSDK14DecisionStatusO3askyA2CmF",
+            "mangledName": "$s10SandboxSDK14DecisionStatusO3askyA2CmF",
+            "moduleName": "SandboxSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "denied",
+            "printedName": "denied",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SandboxSDK.DecisionStatus.Type) -> SandboxSDK.DecisionStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DecisionStatus",
+                    "printedName": "SandboxSDK.DecisionStatus",
+                    "usr": "s:10SandboxSDK14DecisionStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SandboxSDK.DecisionStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DecisionStatus",
+                        "printedName": "SandboxSDK.DecisionStatus",
+                        "usr": "s:10SandboxSDK14DecisionStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10SandboxSDK14DecisionStatusO6deniedyA2CmF",
+            "mangledName": "$s10SandboxSDK14DecisionStatusO6deniedyA2CmF",
+            "moduleName": "SandboxSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "rateLimited",
+            "printedName": "rateLimited",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SandboxSDK.DecisionStatus.Type) -> SandboxSDK.DecisionStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DecisionStatus",
+                    "printedName": "SandboxSDK.DecisionStatus",
+                    "usr": "s:10SandboxSDK14DecisionStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SandboxSDK.DecisionStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DecisionStatus",
+                        "printedName": "SandboxSDK.DecisionStatus",
+                        "usr": "s:10SandboxSDK14DecisionStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10SandboxSDK14DecisionStatusO11rateLimitedyA2CmF",
+            "mangledName": "$s10SandboxSDK14DecisionStatusO11rateLimitedyA2CmF",
+            "moduleName": "SandboxSDK"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SandboxSDK.DecisionStatus?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DecisionStatus",
+                    "printedName": "SandboxSDK.DecisionStatus",
+                    "usr": "s:10SandboxSDK14DecisionStatusO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10SandboxSDK14DecisionStatusO8rawValueACSgSS_tcfc",
+            "mangledName": "$s10SandboxSDK14DecisionStatusO8rawValueACSgSS_tcfc",
+            "moduleName": "SandboxSDK",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10SandboxSDK14DecisionStatusO8rawValueSSvp",
+            "mangledName": "$s10SandboxSDK14DecisionStatusO8rawValueSSvp",
+            "moduleName": "SandboxSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SandboxSDK14DecisionStatusO8rawValueSSvg",
+                "mangledName": "$s10SandboxSDK14DecisionStatusO8rawValueSSvg",
+                "moduleName": "SandboxSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:10SandboxSDK14DecisionStatusO",
+        "mangledName": "$s10SandboxSDK14DecisionStatusO",
+        "moduleName": "SandboxSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PolicyDecision",
+        "printedName": "PolicyDecision",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "status",
+            "printedName": "status",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DecisionStatus",
+                "printedName": "SandboxSDK.DecisionStatus",
+                "usr": "s:10SandboxSDK14DecisionStatusO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10SandboxSDK14PolicyDecisionV6statusAA0D6StatusOvp",
+            "mangledName": "$s10SandboxSDK14PolicyDecisionV6statusAA0D6StatusOvp",
+            "moduleName": "SandboxSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DecisionStatus",
+                    "printedName": "SandboxSDK.DecisionStatus",
+                    "usr": "s:10SandboxSDK14DecisionStatusO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SandboxSDK14PolicyDecisionV6statusAA0D6StatusOvg",
+                "mangledName": "$s10SandboxSDK14PolicyDecisionV6statusAA0D6StatusOvg",
+                "moduleName": "SandboxSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "reason",
+            "printedName": "reason",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10SandboxSDK14PolicyDecisionV6reasonSSSgvp",
+            "mangledName": "$s10SandboxSDK14PolicyDecisionV6reasonSSSgvp",
+            "moduleName": "SandboxSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SandboxSDK14PolicyDecisionV6reasonSSSgvg",
+                "mangledName": "$s10SandboxSDK14PolicyDecisionV6reasonSSSgvg",
+                "moduleName": "SandboxSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "reset_at",
+            "printedName": "reset_at",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int64?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int64",
+                    "printedName": "Swift.Int64",
+                    "usr": "s:s5Int64V"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10SandboxSDK14PolicyDecisionV8reset_ats5Int64VSgvp",
+            "mangledName": "$s10SandboxSDK14PolicyDecisionV8reset_ats5Int64VSgvp",
+            "moduleName": "SandboxSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int64?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int64",
+                        "printedName": "Swift.Int64",
+                        "usr": "s:s5Int64V"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SandboxSDK14PolicyDecisionV8reset_ats5Int64VSgvg",
+                "mangledName": "$s10SandboxSDK14PolicyDecisionV8reset_ats5Int64VSgvg",
+                "moduleName": "SandboxSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PolicyDecision",
+                "printedName": "SandboxSDK.PolicyDecision",
+                "usr": "s:10SandboxSDK14PolicyDecisionV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10SandboxSDK14PolicyDecisionV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s10SandboxSDK14PolicyDecisionV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "SandboxSDK",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:10SandboxSDK14PolicyDecisionV",
+        "mangledName": "$s10SandboxSDK14PolicyDecisionV",
+        "moduleName": "SandboxSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "OkResponse",
+        "printedName": "OkResponse",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "ok",
+            "printedName": "ok",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10SandboxSDK10OkResponseV2okSbvp",
+            "mangledName": "$s10SandboxSDK10OkResponseV2okSbvp",
+            "moduleName": "SandboxSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SandboxSDK10OkResponseV2okSbvg",
+                "mangledName": "$s10SandboxSDK10OkResponseV2okSbvg",
+                "moduleName": "SandboxSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OkResponse",
+                "printedName": "SandboxSDK.OkResponse",
+                "usr": "s:10SandboxSDK10OkResponseV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10SandboxSDK10OkResponseV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s10SandboxSDK10OkResponseV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "SandboxSDK",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:10SandboxSDK10OkResponseV",
+        "mangledName": "$s10SandboxSDK10OkResponseV",
+        "moduleName": "SandboxSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SandboxCore",
+        "printedName": "SandboxCore",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "initialize",
+            "printedName": "initialize()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SandboxSDK0A4CoreO10initializeSbyFZ",
+            "mangledName": "$s10SandboxSDK0A4CoreO10initializeSbyFZ",
+            "moduleName": "SandboxSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "evaluateFeature",
+            "printedName": "evaluateFeature(_:args:context:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PolicyDecision",
+                "printedName": "SandboxSDK.PolicyDecision",
+                "usr": "s:10SandboxSDK14PolicyDecisionV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SandboxSDK0A4CoreO15evaluateFeature_4args7contextAA14PolicyDecisionVSS_SDySSypGAISgtKFZ",
+            "mangledName": "$s10SandboxSDK0A4CoreO15evaluateFeature_4args7contextAA14PolicyDecisionVSS_SDySSypGAISgtKFZ",
+            "moduleName": "SandboxSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "recordUsage",
+            "printedName": "recordUsage(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OkResponse",
+                "printedName": "SandboxSDK.OkResponse",
+                "usr": "s:10SandboxSDK10OkResponseV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SandboxSDK0A4CoreO11recordUsageyAA10OkResponseVSSKFZ",
+            "mangledName": "$s10SandboxSDK0A4CoreO11recordUsageyAA10OkResponseVSSKFZ",
+            "moduleName": "SandboxSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getAuditLog",
+            "printedName": "getAuditLog()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[[Swift.String : Any]]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SandboxSDK0A4CoreO11getAuditLogSaySDySSypGGyKFZ",
+            "mangledName": "$s10SandboxSDK0A4CoreO11getAuditLogSaySDySSypGGyKFZ",
+            "moduleName": "SandboxSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "clearAuditLog",
+            "printedName": "clearAuditLog()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SandboxSDK0A4CoreO13clearAuditLogyyFZ",
+            "mangledName": "$s10SandboxSDK0A4CoreO13clearAuditLogyyFZ",
+            "moduleName": "SandboxSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "updateResourceLimits",
+            "printedName": "updateResourceLimits(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OkResponse",
+                "printedName": "SandboxSDK.OkResponse",
+                "usr": "s:10SandboxSDK10OkResponseV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SandboxSDK0A4CoreO20updateResourceLimitsyAA10OkResponseVSDySSypGKFZ",
+            "mangledName": "$s10SandboxSDK0A4CoreO20updateResourceLimitsyAA10OkResponseVSDySSypGKFZ",
+            "moduleName": "SandboxSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "applyManifest",
+            "printedName": "applyManifest(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SandboxSDK0A4CoreO13applyManifestySbSDySSypGFZ",
+            "mangledName": "$s10SandboxSDK0A4CoreO13applyManifestySbSDySSypGFZ",
+            "moduleName": "SandboxSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "registerFeature",
+            "printedName": "registerFeature(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SandboxSDK0A4CoreO15registerFeatureySbSDySSypGFZ",
+            "mangledName": "$s10SandboxSDK0A4CoreO15registerFeatureySbSDySSypGFZ",
+            "moduleName": "SandboxSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setPolicies",
+            "printedName": "setPolicies(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SandboxSDK0A4CoreO11setPoliciesySbSDySSypGFZ",
+            "mangledName": "$s10SandboxSDK0A4CoreO11setPoliciesySbSDySSypGFZ",
+            "moduleName": "SandboxSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:10SandboxSDK0A4CoreO",
+        "mangledName": "$s10SandboxSDK0A4CoreO",
+        "moduleName": "SandboxSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Function",
+        "name": "initialize",
+        "printedName": "initialize()",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Bool",
+            "printedName": "Swift.Bool",
+            "usr": "s:Sb"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:10SandboxSDK10initializeSbyF",
+        "mangledName": "$s10SandboxSDK10initializeSbyF",
+        "moduleName": "SandboxSDK",
+        "declAttributes": [
+          "AccessControl",
+          "DiscardableResult",
+          "RawDocComment"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "evaluateFeature",
+        "printedName": "evaluateFeature(_:args:context:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "PolicyDecision",
+            "printedName": "SandboxSDK.PolicyDecision",
+            "usr": "s:10SandboxSDK14PolicyDecisionV"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "String",
+            "printedName": "Swift.String",
+            "usr": "s:SS"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "Dictionary",
+            "printedName": "[Swift.String : Any]",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "Any"
+              }
+            ],
+            "hasDefaultArg": true,
+            "usr": "s:SD"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "Optional",
+            "printedName": "[Swift.String : Any]?",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "hasDefaultArg": true,
+            "usr": "s:Sq"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:10SandboxSDK15evaluateFeature_4args7contextAA14PolicyDecisionVSS_SDySSypGAGSgtKF",
+        "mangledName": "$s10SandboxSDK15evaluateFeature_4args7contextAA14PolicyDecisionVSS_SDySSypGAGSgtKF",
+        "moduleName": "SandboxSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "throwing": true,
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "recordUsage",
+        "printedName": "recordUsage(_:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "OkResponse",
+            "printedName": "SandboxSDK.OkResponse",
+            "usr": "s:10SandboxSDK10OkResponseV"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "String",
+            "printedName": "Swift.String",
+            "usr": "s:SS"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:10SandboxSDK11recordUsageyAA10OkResponseVSSKF",
+        "mangledName": "$s10SandboxSDK11recordUsageyAA10OkResponseVSSKF",
+        "moduleName": "SandboxSDK",
+        "declAttributes": [
+          "AccessControl",
+          "DiscardableResult"
+        ],
+        "throwing": true,
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "getAuditLog",
+        "printedName": "getAuditLog()",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Array",
+            "printedName": "[[Swift.String : Any]]",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "usr": "s:Sa"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:10SandboxSDK11getAuditLogSaySDySSypGGyKF",
+        "mangledName": "$s10SandboxSDK11getAuditLogSaySDySSypGGyKF",
+        "moduleName": "SandboxSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "throwing": true,
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "clearAuditLog",
+        "printedName": "clearAuditLog()",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Void",
+            "printedName": "()"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:10SandboxSDK13clearAuditLogyyF",
+        "mangledName": "$s10SandboxSDK13clearAuditLogyyF",
+        "moduleName": "SandboxSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "updateResourceLimits",
+        "printedName": "updateResourceLimits(_:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "OkResponse",
+            "printedName": "SandboxSDK.OkResponse",
+            "usr": "s:10SandboxSDK10OkResponseV"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "Dictionary",
+            "printedName": "[Swift.String : Any]",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "Any"
+              }
+            ],
+            "usr": "s:SD"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:10SandboxSDK20updateResourceLimitsyAA10OkResponseVSDySSypGKF",
+        "mangledName": "$s10SandboxSDK20updateResourceLimitsyAA10OkResponseVSDySSypGKF",
+        "moduleName": "SandboxSDK",
+        "declAttributes": [
+          "AccessControl",
+          "DiscardableResult"
+        ],
+        "throwing": true,
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "applyManifest",
+        "printedName": "applyManifest(_:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Bool",
+            "printedName": "Swift.Bool",
+            "usr": "s:Sb"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "Dictionary",
+            "printedName": "[Swift.String : Any]",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "Any"
+              }
+            ],
+            "usr": "s:SD"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:10SandboxSDK13applyManifestySbSDySSypGF",
+        "mangledName": "$s10SandboxSDK13applyManifestySbSDySSypGF",
+        "moduleName": "SandboxSDK",
+        "declAttributes": [
+          "AccessControl",
+          "DiscardableResult"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "registerFeature",
+        "printedName": "registerFeature(_:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Bool",
+            "printedName": "Swift.Bool",
+            "usr": "s:Sb"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "Dictionary",
+            "printedName": "[Swift.String : Any]",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "Any"
+              }
+            ],
+            "usr": "s:SD"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:10SandboxSDK15registerFeatureySbSDySSypGF",
+        "mangledName": "$s10SandboxSDK15registerFeatureySbSDySSypGF",
+        "moduleName": "SandboxSDK",
+        "declAttributes": [
+          "AccessControl",
+          "DiscardableResult"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "setPolicies",
+        "printedName": "setPolicies(_:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Bool",
+            "printedName": "Swift.Bool",
+            "usr": "s:Sb"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "Dictionary",
+            "printedName": "[Swift.String : Any]",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "Any"
+              }
+            ],
+            "usr": "s:SD"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:10SandboxSDK11setPoliciesySbSDySSypGF",
+        "mangledName": "$s10SandboxSDK11setPoliciesySbSDySSypGF",
+        "moduleName": "SandboxSDK",
+        "declAttributes": [
+          "AccessControl",
+          "DiscardableResult"
+        ],
+        "funcSelfKind": "NonMutating"
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/cliang\/repos\/finclip\/sandbox\/ios\/SandboxSDK\/Sources\/SandboxSDK\/Sandbox.swift",
+      "kind": "StringLiteral",
+      "offset": 403,
+      "length": 9,
+      "value": "\"allowed\""
+    },
+    {
+      "filePath": "\/Users\/cliang\/repos\/finclip\/sandbox\/ios\/SandboxSDK\/Sources\/SandboxSDK\/Sandbox.swift",
+      "kind": "StringLiteral",
+      "offset": 420,
+      "length": 5,
+      "value": "\"ask\""
+    },
+    {
+      "filePath": "\/Users\/cliang\/repos\/finclip\/sandbox\/ios\/SandboxSDK\/Sources\/SandboxSDK\/Sandbox.swift",
+      "kind": "StringLiteral",
+      "offset": 436,
+      "length": 8,
+      "value": "\"denied\""
+    },
+    {
+      "filePath": "\/Users\/cliang\/repos\/finclip\/sandbox\/ios\/SandboxSDK\/Sources\/SandboxSDK\/Sandbox.swift",
+      "kind": "StringLiteral",
+      "offset": 460,
+      "length": 14,
+      "value": "\"rate_limited\""
+    },
+    {
+      "filePath": "\/Users\/cliang\/repos\/finclip\/sandbox\/ios\/SandboxSDK\/Sources\/SandboxSDK\/Sandbox.swift",
+      "kind": "Dictionary",
+      "offset": 1007,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/cliang\/repos\/finclip\/sandbox\/ios\/SandboxSDK\/Sources\/SandboxSDK\/Sandbox.swift",
+      "kind": "Dictionary",
+      "offset": 4067,
+      "length": 3,
+      "value": "[]"
+    }
+  ]
+}

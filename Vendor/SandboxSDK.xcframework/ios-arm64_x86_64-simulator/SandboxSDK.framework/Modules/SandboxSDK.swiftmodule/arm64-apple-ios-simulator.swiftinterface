@@ -1,0 +1,68 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target arm64-apple-ios14.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name SandboxSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
+import Foundation
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public enum SandboxError : Swift.Error, Swift.CustomStringConvertible {
+  case runtime(Swift.String)
+  public var description: Swift.String {
+    get
+  }
+}
+public enum DecisionStatus : Swift.String, Swift.Decodable {
+  case allowed, ask, denied, rateLimited
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct PolicyDecision : Swift.Decodable {
+  public let status: SandboxSDK.DecisionStatus
+  public let reason: Swift.String?
+  public let reset_at: Swift.Int64?
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct OkResponse : Swift.Decodable {
+  public let ok: Swift.Bool
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum SandboxCore {
+  @discardableResult
+  public static func initialize() -> Swift.Bool
+  public static func evaluateFeature(_ name: Swift.String, args: [Swift.String : Any] = [:], context: [Swift.String : Any]? = nil) throws -> SandboxSDK.PolicyDecision
+  @discardableResult
+  public static func recordUsage(_ name: Swift.String) throws -> SandboxSDK.OkResponse
+  public static func getAuditLog() throws -> [[Swift.String : Any]]
+  public static func clearAuditLog()
+  @discardableResult
+  public static func updateResourceLimits(_ limits: [Swift.String : Any]) throws -> SandboxSDK.OkResponse
+  @discardableResult
+  public static func applyManifest(_ manifest: [Swift.String : Any]) -> Swift.Bool
+  @discardableResult
+  public static func registerFeature(_ feature: [Swift.String : Any]) -> Swift.Bool
+  @discardableResult
+  public static func setPolicies(_ policies: [Swift.String : Any]) -> Swift.Bool
+}
+@discardableResult
+public func initialize() -> Swift.Bool
+public func evaluateFeature(_ name: Swift.String, args: [Swift.String : Any] = [:], context: [Swift.String : Any]? = nil) throws -> SandboxSDK.PolicyDecision
+@discardableResult
+public func recordUsage(_ name: Swift.String) throws -> SandboxSDK.OkResponse
+public func getAuditLog() throws -> [[Swift.String : Any]]
+public func clearAuditLog()
+@discardableResult
+public func updateResourceLimits(_ limits: [Swift.String : Any]) throws -> SandboxSDK.OkResponse
+@discardableResult
+public func applyManifest(_ manifest: [Swift.String : Any]) -> Swift.Bool
+@discardableResult
+public func registerFeature(_ feature: [Swift.String : Any]) -> Swift.Bool
+@discardableResult
+public func setPolicies(_ policies: [Swift.String : Any]) -> Swift.Bool
+extension SandboxSDK.DecisionStatus : Swift.Equatable {}
+extension SandboxSDK.DecisionStatus : Swift.Hashable {}
+extension SandboxSDK.DecisionStatus : Swift.RawRepresentable {}

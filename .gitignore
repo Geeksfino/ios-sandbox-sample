@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+
+# Swift Package Manager
+.swiftpm/
+.build/
+
+# Xcode (project is generated from project.yml via XcodeGen)
+*.xcodeproj/
+*.xcworkspace/
+DerivedData/
+xcuserdata/
+*.xcuserstate
+
+# Archives & symbols
+*.xcarchive
+*.dSYM
+*.ipa
+*.app
+
+# Logs & temp
+*.log
+*.orig
+*.swp
+
+# DO NOT ignore the bundled SDK binary; it enables out-of-the-box builds
+# Vendor/SandboxSDK.xcframework/

@@ -1,0 +1,27 @@
+name: SandboxSampleApp
+options:
+  minimumXcodeGenVersion: 2.38.0
+settings:
+  base:
+    DEVELOPMENT_TEAM: ""
+    IPHONEOS_DEPLOYMENT_TARGET: "14.0"
+    SWIFT_VERSION: "5.0"
+    CODE_SIGN_STYLE: Automatic
+
+targets:
+  SandboxSampleApp:
+    type: application
+    platform: iOS
+    deploymentTarget: "14.0"
+    sources:
+      - path: Sources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.finclip.sandbox.sampleapp
+        GENERATE_INFOPLIST_FILE: YES
+    dependencies:
+      - framework: Vendor/SandboxSDK.xcframework
+        embed: true
+        codeSign: true
+    scheme:
+      testTargets: []

@@ -1,0 +1,4 @@
+framework module SandboxSDK {
+  header "SandboxSDK-Swift.h"
+  requires objc
+}
