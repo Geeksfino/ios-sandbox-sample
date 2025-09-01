@@ -1,5 +1,7 @@
 # iOS Sandbox 示例应用 + 预编译 SDK
 
+[English](README.md) | [中文](README.zh-CN.md)
+
 本仓库包含：
 
 - 示例应用源码（`Sources/`）

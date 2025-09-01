@@ -1,5 +1,7 @@
 # iOS Sandbox Sample App + Prebuilt SDK
 
+[English](README.md) | [中文](README.zh-CN.md)
+
 This repository contains:
 
 - Sandbox sample app source (`Sources/`)
