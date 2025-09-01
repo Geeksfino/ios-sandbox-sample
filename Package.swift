@@ -7,6 +7,9 @@ let package = Package(
         .iOS(.v14)
     ],
     products: [
+        // Library product exposing the prebuilt SandboxSDK for consumers
+        .library(name: "SandboxSDK", targets: ["SandboxSDK"]),
+        // Sample app executable (optional for this package)
         .executable(name: "SandboxSampleApp", targets: ["SandboxSampleApp"])
     ],
     dependencies: [],
