@@ -1,5 +1,6 @@
 import Foundation
 import Combine
+import SandboxSDK
 
 final class PolicyStore: ObservableObject {
     @Published var policies: [String: PolicyConfig] = [:]
@@ -16,6 +17,8 @@ final class PolicyStore: ObservableObject {
             seedDefaults()
             save()
         }
+        // Ensure SDK receives the current policy snapshot at startup
+        syncToSDK()
     }
 
     // MARK: - Persistence
@@ -36,6 +39,8 @@ final class PolicyStore: ObservableObject {
         } catch {
             print("PolicyStore save error: \(error)")
         }
+        // Push latest to SDK even if persistence fails, to reflect UI changes live
+        syncToSDK()
     }
 
     // MARK: - Defaults / Presets
@@ -88,5 +93,39 @@ final class PolicyStore: ObservableObject {
         self.policies = dict
         self.activePresetId = preset.id
         save()
+        // save() triggers sync, but call explicitly if needed
+        syncToSDK()
+    }
+
+    // MARK: - SDK Sync
+    private func syncToSDK() {
+        var sdkPolicies: [String: [String: Any]] = [:]
+        for (fid, cfg) in policies {
+            var p: [String: Any] = [:]
+            // Map confirmation/baseline
+            let needsConsent = (cfg.baseline == .ask) || cfg.requireConfirmation
+            p["requires_explicit_consent"] = needsConsent
+            // Presence not modeled locally; default to false
+            p["requires_user_present"] = false
+            // Sensitivity heuristic based on baseline
+            let sensitivity: String = {
+                switch cfg.baseline {
+                case .allow: return "low"
+                case .ask: return "medium"
+                case .deny: return "high"
+                }
+            }()
+            p["sensitivity"] = sensitivity
+            // Rate limit mapping
+            if let rl = cfg.rateLimit {
+                p["rate_limit"] = [
+                    "unit": rl.unit.rawValue,
+                    "max": rl.max
+                ]
+            }
+            // Additional audience/time constraints are enforced in PolicyEngine before SDK call
+            sdkPolicies[fid] = p
+        }
+        _ = SandboxSDK.setPolicies(sdkPolicies)
     }
 }
