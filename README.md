@@ -19,7 +19,7 @@ Developers can build the sample app out-of-the-box and/or consume the SDK as an 
 
 ```text
 +-----------------------------------------------------------+
-|                          Sandbox Model                     |
+|                  App using Sandbox Model                   |
 +-----------------------------------------------------------+
 |  Remote Agent / LLM                                        |
 |          |                                                 |
