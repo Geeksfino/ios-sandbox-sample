@@ -106,13 +106,101 @@ This repo includes an XcodeGen project spec (`project.yml`). Generate and build 
 2. `xcodegen generate`
 3. Open the generated `.xcodeproj` and build the `SandboxSampleApp` scheme
 
-Alternatively, use SwiftPM directly in Xcode by opening the package.
+## Create Your Own iOS App (independent of this repo)
 
-## Versioning & Releases
+The Sandbox SDK can be consumed via SPM to build your own iOS app in a separate project. Below is a minimal path that works end‑to‑end.
 
-- Tags (e.g., `1.0.0`) are used for SPM version resolution.
-- After updating the SDK or APIs, bump the version tag and push.
+1. Prerequisites
 
-## License
+- Xcode 15+
+- iOS 15.0+ deployment target (required if you use modern SwiftUI APIs like `confirmationDialog` and `.borderedProminent`)
+- XcodeGen (to generate an iOS app target)
 
-TBD.
+1. Create a new folder structure
+
+- Create a new directory (e.g., `sandbox-test/`) with:
+  - `Package.swift` (Swift Package to declare the dependency on this SDK)
+  - `Sources/sandbox-test/` with your SwiftUI app sources
+  - `project.yml` (XcodeGen spec to produce an iOS app target)
+
+1. Package.swift
+
+Declare a dependency on this repo and link the `SandboxSDK` product:
+
+```swift
+// swift-tools-version: 5.7
+import PackageDescription
+
+let package = Package(
+    name: "sandbox-test",
+    platforms: [ .iOS(.v14) ],
+    products: [ .executable(name: "sandbox-test", targets: ["sandbox-test"]) ],
+    dependencies: [
+        .package(url: "https://github.com/Geeksfino/ios-sandbox-sample.git", from: "1.0.0")
+    ],
+    targets: [
+        .executableTarget(
+            name: "sandbox-test",
+            dependencies: [ .product(name: "SandboxSDK", package: "ios-sandbox-sample") ],
+            path: "Sources/sandbox-test",
+            swiftSettings: [ .unsafeFlags(["-parse-as-library"]) ]
+        )
+    ]
+)
+```
+
+Note: A SwiftPM executable alone targets macOS by default. To run on iOS, generate an iOS app target with XcodeGen.
+
+1. XcodeGen project.yml
+
+```yaml
+name: sandbox-test
+options:
+  minimumXcodeGenVersion: 2.38.0
+settings:
+  base:
+    IPHONEOS_DEPLOYMENT_TARGET: "15.0"
+    SWIFT_VERSION: "5.0"
+    CODE_SIGN_STYLE: Automatic
+packages:
+  ios-sandbox-sample:
+    url: https://github.com/Geeksfino/ios-sandbox-sample.git
+    from: 1.0.0
+targets:
+  sandbox-test:
+    type: application
+    platform: iOS
+    deploymentTarget: "15.0"
+    sources:
+      - path: Sources/sandbox-test
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.sandbox.test
+        GENERATE_INFOPLIST_FILE: YES
+    dependencies:
+      - package: ios-sandbox-sample
+        product: SandboxSDK
+```
+
+1. Minimal SwiftUI integration
+
+- On app launch: `SandboxSDK.initialize()` then `SandboxSDK.applyManifest(...)`.
+- When a feature is requested: `evaluateFeature(name)` and branch on the returned `DecisionStatus`.
+- After you actually perform the action: `recordUsage(name)`.
+- Swift 6 tip: add `@unknown default:` to your `switch` over `DecisionStatus`.
+
+Example features/policies:
+
+- `navigateToB` → requires user consent (`requires_user_present`, `requires_explicit_consent`).
+- `navigateToC` → denied (e.g., require an unmet capability to enforce deny).
+
+1. Generate & run
+
+- Install XcodeGen: `brew install xcodegen`
+- From your project folder: `xcodegen generate`
+- Open the generated `.xcodeproj`, pick an iOS 15+ simulator, and run the scheme.
+
+Troubleshooting:
+
+- If you see “While building for macOS, no library for this platform was found”, you opened a SwiftPM executable without an iOS app target. Use the XcodeGen project and run the iOS scheme.
+- API availability errors for `alert(...actions:message:)` / `confirmationDialog(...)` mean your deployment target is below iOS 15. Bump it to iOS 15 in `project.yml`.
