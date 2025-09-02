@@ -108,7 +108,6 @@ This repo includes an XcodeGen project spec (`project.yml`). Generate and build 
 
 Alternatively, use SwiftPM directly in Xcode by opening the package.
 
-
 ## Versioning & Releases
 
 - Tags (e.g., `1.0.0`) are used for SPM version resolution.
