@@ -15,6 +15,38 @@ Developers can build the sample app out-of-the-box and/or consume the SDK as an 
 - iOS 14.0+ (deployment target)
 - Git LFS (required to fetch `xcframework` binaries)
 
+## Architecture Overview
+
+```text
++-----------------------------------------------------------+
+|                          Sandbox Model                     |
++-----------------------------------------------------------+
+|  Remote Agent / LLM                                        |
+|          |                                                 |
+|          v                                                 |
+|      [ Host App ]                                          |
+|          |                                                 |
+|          v                                                 |
+|      [ Sandbox SDK ]                                       |
+|          |                                                 |
+|   Checks Feature → Capabilities → Policy                   |
+|          |                                                 |
+|          v                                                 |
+|    [ Policy Engine ]                                       |
+|    - Context check (time, location, consent)               |
+|    - User confirmation if required                         |
+|          |                                                 |
+|          v                                                 |
+|   Decision: Allow / Deny / Needs Confirmation              |
+|          |                                                 |
+|          v                                                 |
+|    [ Adapter / Primitive ]                                 |
+|          |                                                 |
+|          v                                                 |
+|    [ OS API: Camera / File / Network ]                     |
++-----------------------------------------------------------+
+```
+
 ## Consume the SDK via SPM
 
 Add the package to your project (replace version as needed):
