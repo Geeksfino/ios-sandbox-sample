@@ -108,18 +108,6 @@ if decision.status == .allowed {
 
 或直接用 Xcode 打开该 Swift 包并构建。
 
-## 更新内置 SDK（可选）
-
-如果你本地也有 sandbox 源码，并希望刷新内置二进制：
-
-1. 在 `sandbox/` 目录执行：
-
-   ```bash
-   make ios-sdk-xcframework MODE=release
-   ```
-
-   该命令会重新生成 `ios-sandbox-sample/Vendor/SandboxSDK.xcframework`。
-2. 提交变更（Git LFS 会自动处理大文件）。
 
 ## 版本与发布
 

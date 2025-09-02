@@ -108,18 +108,6 @@ This repo includes an XcodeGen project spec (`project.yml`). Generate and build 
 
 Alternatively, use SwiftPM directly in Xcode by opening the package.
 
-## Updating the Bundled SDK
-
-If you also have the sandbox source locally and want to refresh the binary:
-
-1. From `sandbox/` run:
-
-   ```bash
-   make ios-sdk-xcframework MODE=release
-   ```
-
-   This regenerates `ios-sandbox-sample/Vendor/SandboxSDK.xcframework`.
-2. Commit the changes (Git LFS will handle large binaries).
 
 ## Versioning & Releases
 
