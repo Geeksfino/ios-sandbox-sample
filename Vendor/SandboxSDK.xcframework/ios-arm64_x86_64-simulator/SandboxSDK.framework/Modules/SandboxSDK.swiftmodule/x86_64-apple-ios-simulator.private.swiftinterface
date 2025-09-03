@@ -63,6 +63,107 @@ public func applyManifest(_ manifest: [Swift.String : Any]) -> Swift.Bool
 public func registerFeature(_ feature: [Swift.String : Any]) -> Swift.Bool
 @discardableResult
 public func setPolicies(_ policies: [Swift.String : Any]) -> Swift.Bool
+extension SandboxSDK.SandboxCore {
+  public static func getPerformanceSummary() throws -> SandboxSDK.PerformanceSummary
+  public static func getPerformanceHistory() throws -> [SandboxSDK.ExecutionRecord]
+  public static func getResourceUsage() throws -> SandboxSDK.ResourceUsage
+  public static func getResourceLimits() throws -> SandboxSDK.ResourceLimits
+}
+extension SandboxSDK.SandboxCore {
+  @discardableResult
+  public static func revokeCapability(_ capabilityId: Swift.String) throws -> SandboxSDK.OkResponse
+  @discardableResult
+  public static func updateCapability(_ capabilityId: Swift.String, scope: SandboxSDK.CapabilityScope) throws -> SandboxSDK.OkResponse
+}
+public struct PerformanceSummary : Swift.Decodable {
+  public let totalExecutions: Swift.UInt64
+  public let averageDuration: Foundation.TimeInterval
+  public let successRate: Swift.Double
+  public let errorCount: Swift.UInt64
+  public let mostUsedPrimitives: [SandboxSDK.PrimitiveUsage]
+  public let recentAlerts: [SandboxSDK.PerformanceAlert]
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ExecutionRecord : Swift.Decodable {
+  public let featureName: Swift.String
+  public let duration: Foundation.TimeInterval
+  public let success: Swift.Bool
+  public let error: Swift.String?
+  public let memoryUsedMb: Swift.UInt64
+  public let cpuPercent: Swift.UInt64
+  public let networkCalls: Swift.UInt64
+  public let primitivesUsed: [Swift.String]
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct PerformanceAlert : Swift.Decodable {
+  public let alertType: SandboxSDK.AlertType
+  public let message: Swift.String
+  public let thresholdValue: Swift.Double
+  public let actualValue: Swift.Double
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct PrimitiveUsage : Swift.Decodable {
+  public let name: Swift.String
+  public let count: Swift.UInt64
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum AlertType : Swift.String, Swift.Decodable {
+  case highLatency
+  case highMemoryUsage
+  case highCpuUsage
+  case highErrorRate
+  case resourceExhaustion
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct ResourceUsage : Swift.Decodable {
+  public let memoryUsedMb: Swift.UInt64
+  public let cpuPercent: Swift.UInt64
+  public let networkCalls: Swift.UInt64
+  public let fileSize: Swift.UInt64
+  public let executionTime: Foundation.TimeInterval
+  public let concurrentOperations: Swift.UInt64
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ResourceLimits : Swift.Decodable {
+  public let maxMemoryMb: Swift.UInt64
+  public let maxCpuPercent: Swift.UInt64
+  public let maxNetworkCalls: Swift.UInt64
+  public let maxFileSize: Swift.UInt64
+  public let maxExecutionTime: Foundation.TimeInterval
+  public let maxConcurrentOperations: Swift.UInt64
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum CapabilityScope : Swift.String, Swift.CaseIterable {
+  case full
+  case restricted
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [SandboxSDK.CapabilityScope]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [SandboxSDK.CapabilityScope] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public func getPerformanceSummary() throws -> SandboxSDK.PerformanceSummary
+public func getPerformanceHistory() throws -> [SandboxSDK.ExecutionRecord]
+public func getResourceUsage() throws -> SandboxSDK.ResourceUsage
+public func getResourceLimits() throws -> SandboxSDK.ResourceLimits
+@discardableResult
+public func revokeCapability(_ capabilityId: Swift.String) throws -> SandboxSDK.OkResponse
+@discardableResult
+public func updateCapability(_ capabilityId: Swift.String, scope: SandboxSDK.CapabilityScope) throws -> SandboxSDK.OkResponse
 extension SandboxSDK.DecisionStatus : Swift.Equatable {}
 extension SandboxSDK.DecisionStatus : Swift.Hashable {}
 extension SandboxSDK.DecisionStatus : Swift.RawRepresentable {}
+extension SandboxSDK.AlertType : Swift.Equatable {}
+extension SandboxSDK.AlertType : Swift.Hashable {}
+extension SandboxSDK.AlertType : Swift.RawRepresentable {}
+extension SandboxSDK.CapabilityScope : Swift.Equatable {}
+extension SandboxSDK.CapabilityScope : Swift.Hashable {}
+extension SandboxSDK.CapabilityScope : Swift.RawRepresentable {}

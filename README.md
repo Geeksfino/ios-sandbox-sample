@@ -7,6 +7,10 @@ This repository contains:
 - Sandbox sample app source (`Sources/`)
 - Prebuilt SDK binary (`Vendor/SandboxSDK.xcframework`) exposed via Swift Package Manager
 
+Documentation:
+
+- See `Vendor/SandboxSDK-Documentation.md` for the complete Swift API guide (staged with the XCFramework).
+
 Developers can build the sample app out-of-the-box and/or consume the SDK as an SPM dependency without checking out the sandbox source.
 
 ## Requirements
