@@ -208,3 +208,9 @@ Troubleshooting:
 
 - If you see “While building for macOS, no library for this platform was found”, you opened a SwiftPM executable without an iOS app target. Use the XcodeGen project and run the iOS scheme.
 - API availability errors for `alert(...actions:message:)` / `confirmationDialog(...)` mean your deployment target is below iOS 15. Bump it to iOS 15 in `project.yml`.
+
+## SDK Build Information
+- **Version**: dc0deb3
+- **Built from**: [dc0deb37d59e9039c723cd319b9adcbc626906ca](https://github.com/Geeksfino/finclip-sandbox/commit/dc0deb37d59e9039c723cd319b9adcbc626906ca)
+- **Build date**: Wed Sep  3 07:52:06 UTC 2025
+
