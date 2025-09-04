@@ -1,119 +1,104 @@
 import Foundation
 import SandboxSDK
 
-// Build and apply demo features + policies on app startup.
+// Build and apply demo features + policies on app startup using typed APIs.
 @discardableResult
 func registerDemoFeatures() -> Bool {
-    let features: [[String: Any]] = [
-        [
-            "name": "open_payment_page",
-            "category": "Native",
-            "path": "/payment",
-            "required_capabilities": ["UIAccess"],
-            "primitives": [
-                ["type": "MobileUI", "page": "/payment"]
+    let features: [Feature] = [
+        Feature(
+            name: "open_payment_page",
+            category: .Native,
+            path: "/payment",
+            requiredCapabilities: [.UIAccess],
+            primitives: [.MobileUI(page: "/payment", component: nil)]
+        ),
+        Feature(
+            name: "play_sound",
+            category: .Native,
+            path: "media://tone",
+            requiredCapabilities: [.AudioOutput],
+            primitives: [.PlayAudio(source: "media://tone", volume: 80)]
+        ),
+        Feature(
+            name: "scan_ble",
+            category: .Native,
+            path: "bluetooth",
+            requiredCapabilities: [.Bluetooth],
+            primitives: [.BluetoothScan]
+        ),
+        Feature(
+            name: "read_nfc",
+            category: .Native,
+            path: "nfc",
+            requiredCapabilities: [.NFC],
+            primitives: [.NfcReadTag]
+        ),
+        Feature(
+            name: "exportPortfolioCSV",
+            category: .Native,
+            path: "/export",
+            requiredCapabilities: [.Network],
+            primitives: [.NetworkOp(url: "https://api.example.com/export", method: "GET")]
+        ),
+        Feature(
+            name: "limitedFeature",
+            category: .Native,
+            path: "/limited",
+            requiredCapabilities: [.UIAccess],
+            primitives: [.ShowDialog(title: "Hello", message: "Rate-limited action")]
+        ),
+        Feature(
+            name: "turn_on_light",
+            category: .Native,
+            path: "/iot/lights/on",
+            requiredCapabilities: [.DeviceControl],
+            primitives: [.ShowDialog(title: "Lights", message: "Turning on living room light…")]
+        ),
+        Feature(
+            name: "perform_payment",
+            category: .Native,
+            path: "/payment/confirm",
+            requiredCapabilities: [.UIAccess, .Network],
+            primitives: [
+                .ShowDialog(title: "Confirm", message: "Proceed with payment?"),
+                .NetworkOp(url: "https://api.example.com/pay", method: "POST")
             ]
-        ],
-        [
-            "name": "play_sound",
-            "category": "Native",
-            "path": "media://tone",
-            "required_capabilities": ["AudioOutput"],
-            "primitives": [
-                ["type": "PlayAudio", "source": "media://tone", "volume": 80]
-            ]
-        ],
-        [
-            "name": "scan_ble",
-            "category": "Native",
-            "path": "bluetooth",
-            "required_capabilities": ["Bluetooth"],
-            "primitives": [
-                ["type": "BluetoothScan"]
-            ]
-        ],
-        [
-            "name": "read_nfc",
-            "category": "Native",
-            "path": "nfc",
-            "required_capabilities": ["NFC"],
-            "primitives": [
-                ["type": "NfcReadTag"]
-            ]
-        ],
-        [
-            "name": "exportPortfolioCSV",
-            "category": "Native",
-            "path": "/export",
-            "required_capabilities": ["Network"],
-            "primitives": [
-                ["type": "NetworkOp", "url": "https://api.example.com/export", "method": "GET"]
-            ]
-        ],
-        [
-            "name": "limitedFeature",
-            "category": "Native",
-            "path": "/limited",
-            "required_capabilities": ["UIAccess"],
-            "primitives": [
-                ["type": "ShowDialog", "title": "Hello", "message": "Rate-limited action"]
-            ]
-        ],
-        [
-            "name": "turn_on_light",
-            "category": "Native",
-            "path": "/iot/lights/on",
-            "required_capabilities": ["DeviceControl"],
-            "primitives": [
-                ["type": "ShowDialog", "title": "Lights", "message": "Turning on living room light…"]
-            ]
-        ],
-        [
-            "name": "perform_payment",
-            "category": "Native",
-            "path": "/payment/confirm",
-            "required_capabilities": ["UIAccess", "Network"],
-            "primitives": [
-                ["type": "ShowDialog", "title": "Confirm", "message": "Proceed with payment?"],
-                ["type": "NetworkOp", "url": "https://api.example.com/pay", "method": "POST"]
-            ]
-        ],
-        [
-            "name": "navigateTo",
-            "category": "Native",
-            "path": "/navigate",
-            "required_capabilities": ["UIAccess"],
-            "primitives": [
-                ["type": "MobileUI", "page": "/navigate"]
-            ]
-        ]
+        ),
+        Feature(
+            name: "navigateTo",
+            category: .Native,
+            path: "/navigate",
+            requiredCapabilities: [.UIAccess],
+            primitives: [.MobileUI(page: "/navigate", component: nil)]
+        )
     ]
 
-    let policies: [String: Any] = [
-        "exportPortfolioCSV": [
-            "requires_user_present": true,
-            "requires_explicit_consent": true,
-            "sensitivity": "high"
-        ],
-        "turn_on_light": [
-            "rate_limit": ["unit": "day", "max": 3],
-            "sensitivity": "low"
-        ],
-        "limitedFeature": [
-            "rate_limit": ["unit": "minute", "max": 2],
-            "sensitivity": "low"
-        ],
-        "navigateTo": [
-            "requires_user_present": true,
-            "rate_limit": ["unit": "minute", "max": 10],
-            "sensitivity": "low"
-        ]
+    let policies: [String: Policy] = [
+        "exportPortfolioCSV": Policy(
+            requiresUserPresent: true,
+            requiresExplicitConsent: true,
+            sensitivity: .high,
+            rateLimit: nil
+        ),
+        "turn_on_light": Policy(
+            requiresUserPresent: false,
+            requiresExplicitConsent: false,
+            sensitivity: .low,
+            rateLimit: SandboxSDK.RateLimit(unit: SandboxSDK.RateUnit.day, max: 3)
+        ),
+        "limitedFeature": Policy(
+            requiresUserPresent: false,
+            requiresExplicitConsent: false,
+            sensitivity: .low,
+            rateLimit: SandboxSDK.RateLimit(unit: SandboxSDK.RateUnit.minute, max: 2)
+        ),
+        "navigateTo": Policy(
+            requiresUserPresent: true,
+            requiresExplicitConsent: false,
+            sensitivity: .low,
+            rateLimit: SandboxSDK.RateLimit(unit: SandboxSDK.RateUnit.minute, max: 10)
+        )
     ]
 
-    let manifest: [String: Any] = [
-        "features": features,
-        "policies": policies
-    ]
-
-    return SandboxSDK.applyManifest(manifest)
+    return applyManifest(features: features, policies: policies)
 }
