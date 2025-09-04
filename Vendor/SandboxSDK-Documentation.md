@@ -40,25 +40,25 @@ import SandboxSDK
 // 1. Initialize the sandbox
 SandboxSDK.initialize()
 
-// 2. Register features and policies
-let success = SandboxSDK.applyManifest([
-    "features": [
-        [
-            "name": "open_payment_page",
-            "category": "Native",
-            "path": "/payment",
-            "required_capabilities": ["UIAccess"],
-            "primitives": [
-                ["type": "MobileUI", "page": "/payment"]
-            ]
-        ]
-    ],
-    "policies": [
-        "open_payment_page": [
-            "requires_user_present": true,
-            "rate_limit": ["unit": "minute", "max": 5]
-        ]
-    ]
+// 2. Register features and policies (typed APIs)
+let feature = Feature(
+    name: "open_payment_page",
+    category: .Native,
+    path: "/payment",
+    requiredCapabilities: [.UIAccess],
+    primitives: [.MobileUI(page: "/payment", component: nil)]
+)
+
+let policy = Policy(
+    requiresUserPresent: true,
+    requiresExplicitConsent: false,
+    sensitivity: .low,
+    // RateUnit supported: .minute, .day
+    rateLimit: SandboxSDK.RateLimit(unit: .minute, max: 5)
+)
+
+let success = applyManifest(features: [feature], policies: [
+    "open_payment_page": policy
 ])
 
 // 3. Evaluate and execute features
@@ -152,6 +152,12 @@ Record successful feature usage for rate limiting and audit.
 #### Feature Management
 
 ```swift
+// Preferred typed APIs
+func registerFeature(_ feature: Feature) -> Bool
+func applyManifest(features: [Feature], policies: [String: Policy]) -> Bool
+func setPolicies(_ policies: [String: Policy]) -> Bool
+
+// Legacy dictionary-based APIs (still available)
 func registerFeature(_ feature: [String: Any]) -> Bool
 func applyManifest(_ manifest: [String: Any]) -> Bool
 func setPolicies(_ policies: [String: Any]) -> Bool

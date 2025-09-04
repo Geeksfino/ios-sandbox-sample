@@ -45,25 +45,25 @@ import SandboxSDK
 // 1) 初始化
 SandboxSDK.initialize()
 
-// 2) 注册特性与策略
-let success = SandboxSDK.applyManifest([
-    "features": [
-        [
-            "name": "open_payment_page",
-            "category": "Native",
-            "path": "/payment",
-            "required_capabilities": ["UIAccess"],
-            "primitives": [
-                ["type": "MobileUI", "page": "/payment"]
-            ]
-        ]
-    ],
-    "policies": [
-        "open_payment_page": [
-            "requires_user_present": true,
-            "rate_limit": ["unit": "minute", "max": 5]
-        ]
-    ]
+// 2) 使用强类型 API 注册特性与策略（推荐）
+let feature = Feature(
+    name: "open_payment_page",
+    category: .Native,
+    path: "/payment",
+    requiredCapabilities: [.UIAccess],
+    primitives: [.MobileUI(page: "/payment", component: nil)]
+)
+
+let policy = Policy(
+    requiresUserPresent: true,
+    requiresExplicitConsent: false,
+    sensitivity: .low,
+    // RateUnit 与 Rust 对齐：仅支持 .minute 与 .day
+    rateLimit: SandboxSDK.RateLimit(unit: .minute, max: 5)
+)
+
+let success = applyManifest(features: [feature], policies: [
+    "open_payment_page": policy
 ])
 
 // 3) 评估并执行业务特性
@@ -151,6 +151,12 @@ func recordUsage(_ name: String) throws -> OkResponse
 ### 特性与策略管理
 
 ```swift
+// 推荐的强类型 API
+func registerFeature(_ feature: Feature) -> Bool
+func applyManifest(features: [Feature], policies: [String: Policy]) -> Bool
+func setPolicies(_ policies: [String: Policy]) -> Bool
+
+// 兼容的字典 API（仍可用，但非首选）
 func registerFeature(_ feature: [String: Any]) -> Bool
 func applyManifest(_ manifest: [String: Any]) -> Bool
 func setPolicies(_ policies: [String: Any]) -> Bool
@@ -202,6 +208,21 @@ struct PrimitiveUsage {
     let name: String
     let count: UInt64
 }
+
+// 强类型策略模型（新增）
+struct Policy {
+    let requiresUserPresent: Bool
+    let requiresExplicitConsent: Bool
+    let sensitivity: Sensitivity   // .low, .medium, .high
+    let rateLimit: RateLimit?
+}
+
+enum Sensitivity: String { case low, medium, high }
+
+struct RateLimit { let unit: RateUnit; let max: Int }
+
+// 与 Rust 核心一致，仅支持以下单位：
+enum RateUnit: String { case minute, day }
 ```
 
 ---

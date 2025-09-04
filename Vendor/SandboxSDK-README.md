@@ -33,23 +33,25 @@ import SandboxSDK
 // 1. Initialize
 SandboxSDK.initialize()
 
-// 2. Register features
-SandboxSDK.applyManifest([
-    "features": [
-        [
-            "name": "open_payment_page",
-            "category": "Native", 
-            "path": "/payment",
-            "required_capabilities": ["UIAccess"],
-            "primitives": [["type": "MobileUI", "page": "/payment"]]
-        ]
-    ],
-    "policies": [
-        "open_payment_page": [
-            "requires_user_present": true,
-            "rate_limit": ["unit": "minute", "max": 5]
-        ]
-    ]
+// 2. Register features and policies (typed APIs)
+let feature = Feature(
+    name: "open_payment_page",
+    category: .Native,
+    path: "/payment",
+    requiredCapabilities: [.UIAccess],
+    primitives: [.MobileUI(page: "/payment", component: nil)]
+)
+
+let policy = Policy(
+    requiresUserPresent: true,
+    requiresExplicitConsent: false,
+    sensitivity: .low,
+    // RateUnit supported: .minute, .day
+    rateLimit: SandboxSDK.RateLimit(unit: .minute, max: 5)
+)
+
+applyManifest(features: [feature], policies: [
+    "open_payment_page": policy
 ])
 
 // 3. Evaluate and execute
