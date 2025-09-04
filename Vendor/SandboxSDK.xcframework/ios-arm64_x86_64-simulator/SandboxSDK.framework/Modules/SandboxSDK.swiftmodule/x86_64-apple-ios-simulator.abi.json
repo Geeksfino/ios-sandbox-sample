@@ -1167,6 +1167,175 @@
           },
           {
             "kind": "Function",
+            "name": "setPolicy",
+            "printedName": "setPolicy(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Policy",
+                "printedName": "SandboxSDK.Policy",
+                "usr": "s:10SandboxSDK6PolicyV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SandboxSDK0A4CoreO9setPolicyySbSS_AA0E0VtFZ",
+            "mangledName": "$s10SandboxSDK0A4CoreO9setPolicyySbSS_AA0E0VtFZ",
+            "moduleName": "SandboxSDK",
+            "static": true,
+            "declAttributes": [
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setPolicies",
+            "printedName": "setPolicies(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : SandboxSDK.Policy]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Policy",
+                    "printedName": "SandboxSDK.Policy",
+                    "usr": "s:10SandboxSDK6PolicyV"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SandboxSDK0A4CoreO11setPoliciesySbSDySSAA6PolicyVGFZ",
+            "mangledName": "$s10SandboxSDK0A4CoreO11setPoliciesySbSDySSAA6PolicyVGFZ",
+            "moduleName": "SandboxSDK",
+            "static": true,
+            "declAttributes": [
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "registerFeature",
+            "printedName": "registerFeature(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Feature",
+                "printedName": "SandboxSDK.Feature",
+                "usr": "s:10SandboxSDK7FeatureV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SandboxSDK0A4CoreO15registerFeatureySbAA0E0VFZ",
+            "mangledName": "$s10SandboxSDK0A4CoreO15registerFeatureySbAA0E0VFZ",
+            "moduleName": "SandboxSDK",
+            "static": true,
+            "declAttributes": [
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "applyManifest",
+            "printedName": "applyManifest(features:policies:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[SandboxSDK.Feature]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Feature",
+                    "printedName": "SandboxSDK.Feature",
+                    "usr": "s:10SandboxSDK7FeatureV"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : SandboxSDK.Policy]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Policy",
+                    "printedName": "SandboxSDK.Policy",
+                    "usr": "s:10SandboxSDK6PolicyV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SandboxSDK0A4CoreO13applyManifest8features8policiesSbSayAA7FeatureVG_SDySSAA6PolicyVGtFZ",
+            "mangledName": "$s10SandboxSDK0A4CoreO13applyManifest8features8policiesSbSayAA7FeatureVG_SDySSAA6PolicyVGtFZ",
+            "moduleName": "SandboxSDK",
+            "static": true,
+            "declAttributes": [
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "getPerformanceSummary",
             "printedName": "getPerformanceSummary()",
             "children": [
@@ -1717,6 +1886,2813 @@
         "declKind": "Func",
         "usr": "s:10SandboxSDK11setPoliciesySbSDySSypGF",
         "mangledName": "$s10SandboxSDK11setPoliciesySbSDySSypGF",
+        "moduleName": "SandboxSDK",
+        "declAttributes": [
+          "AccessControl",
+          "DiscardableResult"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Sensitivity",
+        "printedName": "Sensitivity",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "low",
+            "printedName": "low",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SandboxSDK.Sensitivity.Type) -> SandboxSDK.Sensitivity",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Sensitivity",
+                    "printedName": "SandboxSDK.Sensitivity",
+                    "usr": "s:10SandboxSDK11SensitivityO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SandboxSDK.Sensitivity.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Sensitivity",
+                        "printedName": "SandboxSDK.Sensitivity",
+                        "usr": "s:10SandboxSDK11SensitivityO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10SandboxSDK11SensitivityO3lowyA2CmF",
+            "mangledName": "$s10SandboxSDK11SensitivityO3lowyA2CmF",
+            "moduleName": "SandboxSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "medium",
+            "printedName": "medium",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SandboxSDK.Sensitivity.Type) -> SandboxSDK.Sensitivity",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Sensitivity",
+                    "printedName": "SandboxSDK.Sensitivity",
+                    "usr": "s:10SandboxSDK11SensitivityO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SandboxSDK.Sensitivity.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Sensitivity",
+                        "printedName": "SandboxSDK.Sensitivity",
+                        "usr": "s:10SandboxSDK11SensitivityO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10SandboxSDK11SensitivityO6mediumyA2CmF",
+            "mangledName": "$s10SandboxSDK11SensitivityO6mediumyA2CmF",
+            "moduleName": "SandboxSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "high",
+            "printedName": "high",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SandboxSDK.Sensitivity.Type) -> SandboxSDK.Sensitivity",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Sensitivity",
+                    "printedName": "SandboxSDK.Sensitivity",
+                    "usr": "s:10SandboxSDK11SensitivityO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SandboxSDK.Sensitivity.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Sensitivity",
+                        "printedName": "SandboxSDK.Sensitivity",
+                        "usr": "s:10SandboxSDK11SensitivityO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10SandboxSDK11SensitivityO4highyA2CmF",
+            "mangledName": "$s10SandboxSDK11SensitivityO4highyA2CmF",
+            "moduleName": "SandboxSDK"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SandboxSDK.Sensitivity?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Sensitivity",
+                    "printedName": "SandboxSDK.Sensitivity",
+                    "usr": "s:10SandboxSDK11SensitivityO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10SandboxSDK11SensitivityO8rawValueACSgSS_tcfc",
+            "mangledName": "$s10SandboxSDK11SensitivityO8rawValueACSgSS_tcfc",
+            "moduleName": "SandboxSDK",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10SandboxSDK11SensitivityO8rawValueSSvp",
+            "mangledName": "$s10SandboxSDK11SensitivityO8rawValueSSvp",
+            "moduleName": "SandboxSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SandboxSDK11SensitivityO8rawValueSSvg",
+                "mangledName": "$s10SandboxSDK11SensitivityO8rawValueSSvg",
+                "moduleName": "SandboxSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:10SandboxSDK11SensitivityO",
+        "mangledName": "$s10SandboxSDK11SensitivityO",
+        "moduleName": "SandboxSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RateUnit",
+        "printedName": "RateUnit",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "minute",
+            "printedName": "minute",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SandboxSDK.RateUnit.Type) -> SandboxSDK.RateUnit",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RateUnit",
+                    "printedName": "SandboxSDK.RateUnit",
+                    "usr": "s:10SandboxSDK8RateUnitO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SandboxSDK.RateUnit.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RateUnit",
+                        "printedName": "SandboxSDK.RateUnit",
+                        "usr": "s:10SandboxSDK8RateUnitO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10SandboxSDK8RateUnitO6minuteyA2CmF",
+            "mangledName": "$s10SandboxSDK8RateUnitO6minuteyA2CmF",
+            "moduleName": "SandboxSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "day",
+            "printedName": "day",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SandboxSDK.RateUnit.Type) -> SandboxSDK.RateUnit",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RateUnit",
+                    "printedName": "SandboxSDK.RateUnit",
+                    "usr": "s:10SandboxSDK8RateUnitO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SandboxSDK.RateUnit.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RateUnit",
+                        "printedName": "SandboxSDK.RateUnit",
+                        "usr": "s:10SandboxSDK8RateUnitO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10SandboxSDK8RateUnitO3dayyA2CmF",
+            "mangledName": "$s10SandboxSDK8RateUnitO3dayyA2CmF",
+            "moduleName": "SandboxSDK"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SandboxSDK.RateUnit?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RateUnit",
+                    "printedName": "SandboxSDK.RateUnit",
+                    "usr": "s:10SandboxSDK8RateUnitO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10SandboxSDK8RateUnitO8rawValueACSgSS_tcfc",
+            "mangledName": "$s10SandboxSDK8RateUnitO8rawValueACSgSS_tcfc",
+            "moduleName": "SandboxSDK",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10SandboxSDK8RateUnitO8rawValueSSvp",
+            "mangledName": "$s10SandboxSDK8RateUnitO8rawValueSSvp",
+            "moduleName": "SandboxSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SandboxSDK8RateUnitO8rawValueSSvg",
+                "mangledName": "$s10SandboxSDK8RateUnitO8rawValueSSvg",
+                "moduleName": "SandboxSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:10SandboxSDK8RateUnitO",
+        "mangledName": "$s10SandboxSDK8RateUnitO",
+        "moduleName": "SandboxSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RateLimit",
+        "printedName": "RateLimit",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "unit",
+            "printedName": "unit",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RateUnit",
+                "printedName": "SandboxSDK.RateUnit",
+                "usr": "s:10SandboxSDK8RateUnitO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10SandboxSDK9RateLimitV4unitAA0C4UnitOvp",
+            "mangledName": "$s10SandboxSDK9RateLimitV4unitAA0C4UnitOvp",
+            "moduleName": "SandboxSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RateUnit",
+                    "printedName": "SandboxSDK.RateUnit",
+                    "usr": "s:10SandboxSDK8RateUnitO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SandboxSDK9RateLimitV4unitAA0C4UnitOvg",
+                "mangledName": "$s10SandboxSDK9RateLimitV4unitAA0C4UnitOvg",
+                "moduleName": "SandboxSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "max",
+            "printedName": "max",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10SandboxSDK9RateLimitV3maxSivp",
+            "mangledName": "$s10SandboxSDK9RateLimitV3maxSivp",
+            "moduleName": "SandboxSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SandboxSDK9RateLimitV3maxSivg",
+                "mangledName": "$s10SandboxSDK9RateLimitV3maxSivg",
+                "moduleName": "SandboxSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(unit:max:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RateLimit",
+                "printedName": "SandboxSDK.RateLimit",
+                "usr": "s:10SandboxSDK9RateLimitV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RateUnit",
+                "printedName": "SandboxSDK.RateUnit",
+                "usr": "s:10SandboxSDK8RateUnitO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10SandboxSDK9RateLimitV4unit3maxAcA0C4UnitO_Sitcfc",
+            "mangledName": "$s10SandboxSDK9RateLimitV4unit3maxAcA0C4UnitO_Sitcfc",
+            "moduleName": "SandboxSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RateLimit",
+                "printedName": "SandboxSDK.RateLimit",
+                "usr": "s:10SandboxSDK9RateLimitV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10SandboxSDK9RateLimitV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s10SandboxSDK9RateLimitV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "SandboxSDK",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SandboxSDK9RateLimitV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s10SandboxSDK9RateLimitV6encode2toys7Encoder_p_tKF",
+            "moduleName": "SandboxSDK",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:10SandboxSDK9RateLimitV",
+        "mangledName": "$s10SandboxSDK9RateLimitV",
+        "moduleName": "SandboxSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Policy",
+        "printedName": "Policy",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "requiresUserPresent",
+            "printedName": "requiresUserPresent",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10SandboxSDK6PolicyV19requiresUserPresentSbSgvp",
+            "mangledName": "$s10SandboxSDK6PolicyV19requiresUserPresentSbSgvp",
+            "moduleName": "SandboxSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Bool?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SandboxSDK6PolicyV19requiresUserPresentSbSgvg",
+                "mangledName": "$s10SandboxSDK6PolicyV19requiresUserPresentSbSgvg",
+                "moduleName": "SandboxSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Bool?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SandboxSDK6PolicyV19requiresUserPresentSbSgvs",
+                "mangledName": "$s10SandboxSDK6PolicyV19requiresUserPresentSbSgvs",
+                "moduleName": "SandboxSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SandboxSDK6PolicyV19requiresUserPresentSbSgvM",
+                "mangledName": "$s10SandboxSDK6PolicyV19requiresUserPresentSbSgvM",
+                "moduleName": "SandboxSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "requiresExplicitConsent",
+            "printedName": "requiresExplicitConsent",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10SandboxSDK6PolicyV23requiresExplicitConsentSbSgvp",
+            "mangledName": "$s10SandboxSDK6PolicyV23requiresExplicitConsentSbSgvp",
+            "moduleName": "SandboxSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Bool?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SandboxSDK6PolicyV23requiresExplicitConsentSbSgvg",
+                "mangledName": "$s10SandboxSDK6PolicyV23requiresExplicitConsentSbSgvg",
+                "moduleName": "SandboxSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Bool?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SandboxSDK6PolicyV23requiresExplicitConsentSbSgvs",
+                "mangledName": "$s10SandboxSDK6PolicyV23requiresExplicitConsentSbSgvs",
+                "moduleName": "SandboxSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SandboxSDK6PolicyV23requiresExplicitConsentSbSgvM",
+                "mangledName": "$s10SandboxSDK6PolicyV23requiresExplicitConsentSbSgvM",
+                "moduleName": "SandboxSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "sensitivity",
+            "printedName": "sensitivity",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SandboxSDK.Sensitivity?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Sensitivity",
+                    "printedName": "SandboxSDK.Sensitivity",
+                    "usr": "s:10SandboxSDK11SensitivityO"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10SandboxSDK6PolicyV11sensitivityAA11SensitivityOSgvp",
+            "mangledName": "$s10SandboxSDK6PolicyV11sensitivityAA11SensitivityOSgvp",
+            "moduleName": "SandboxSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "SandboxSDK.Sensitivity?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Sensitivity",
+                        "printedName": "SandboxSDK.Sensitivity",
+                        "usr": "s:10SandboxSDK11SensitivityO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SandboxSDK6PolicyV11sensitivityAA11SensitivityOSgvg",
+                "mangledName": "$s10SandboxSDK6PolicyV11sensitivityAA11SensitivityOSgvg",
+                "moduleName": "SandboxSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "SandboxSDK.Sensitivity?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Sensitivity",
+                        "printedName": "SandboxSDK.Sensitivity",
+                        "usr": "s:10SandboxSDK11SensitivityO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SandboxSDK6PolicyV11sensitivityAA11SensitivityOSgvs",
+                "mangledName": "$s10SandboxSDK6PolicyV11sensitivityAA11SensitivityOSgvs",
+                "moduleName": "SandboxSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SandboxSDK6PolicyV11sensitivityAA11SensitivityOSgvM",
+                "mangledName": "$s10SandboxSDK6PolicyV11sensitivityAA11SensitivityOSgvM",
+                "moduleName": "SandboxSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "rateLimit",
+            "printedName": "rateLimit",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SandboxSDK.RateLimit?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RateLimit",
+                    "printedName": "SandboxSDK.RateLimit",
+                    "usr": "s:10SandboxSDK9RateLimitV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10SandboxSDK6PolicyV9rateLimitAA04RateE0VSgvp",
+            "mangledName": "$s10SandboxSDK6PolicyV9rateLimitAA04RateE0VSgvp",
+            "moduleName": "SandboxSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "SandboxSDK.RateLimit?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RateLimit",
+                        "printedName": "SandboxSDK.RateLimit",
+                        "usr": "s:10SandboxSDK9RateLimitV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SandboxSDK6PolicyV9rateLimitAA04RateE0VSgvg",
+                "mangledName": "$s10SandboxSDK6PolicyV9rateLimitAA04RateE0VSgvg",
+                "moduleName": "SandboxSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "SandboxSDK.RateLimit?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RateLimit",
+                        "printedName": "SandboxSDK.RateLimit",
+                        "usr": "s:10SandboxSDK9RateLimitV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SandboxSDK6PolicyV9rateLimitAA04RateE0VSgvs",
+                "mangledName": "$s10SandboxSDK6PolicyV9rateLimitAA04RateE0VSgvs",
+                "moduleName": "SandboxSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SandboxSDK6PolicyV9rateLimitAA04RateE0VSgvM",
+                "mangledName": "$s10SandboxSDK6PolicyV9rateLimitAA04RateE0VSgvM",
+                "moduleName": "SandboxSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(requiresUserPresent:requiresExplicitConsent:sensitivity:rateLimit:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Policy",
+                "printedName": "SandboxSDK.Policy",
+                "usr": "s:10SandboxSDK6PolicyV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SandboxSDK.Sensitivity?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Sensitivity",
+                    "printedName": "SandboxSDK.Sensitivity",
+                    "usr": "s:10SandboxSDK11SensitivityO"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SandboxSDK.RateLimit?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RateLimit",
+                    "printedName": "SandboxSDK.RateLimit",
+                    "usr": "s:10SandboxSDK9RateLimitV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10SandboxSDK6PolicyV19requiresUserPresent0D15ExplicitConsent11sensitivity9rateLimitACSbSg_AhA11SensitivityOSgAA04RateK0VSgtcfc",
+            "mangledName": "$s10SandboxSDK6PolicyV19requiresUserPresent0D15ExplicitConsent11sensitivity9rateLimitACSbSg_AhA11SensitivityOSgAA04RateK0VSgtcfc",
+            "moduleName": "SandboxSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Policy",
+                "printedName": "SandboxSDK.Policy",
+                "usr": "s:10SandboxSDK6PolicyV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10SandboxSDK6PolicyV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s10SandboxSDK6PolicyV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "SandboxSDK",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SandboxSDK6PolicyV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s10SandboxSDK6PolicyV6encode2toys7Encoder_p_tKF",
+            "moduleName": "SandboxSDK",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:10SandboxSDK6PolicyV",
+        "mangledName": "$s10SandboxSDK6PolicyV",
+        "moduleName": "SandboxSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "Function",
+        "name": "setPolicy",
+        "printedName": "setPolicy(_:_:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Bool",
+            "printedName": "Swift.Bool",
+            "usr": "s:Sb"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "String",
+            "printedName": "Swift.String",
+            "usr": "s:SS"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "Policy",
+            "printedName": "SandboxSDK.Policy",
+            "usr": "s:10SandboxSDK6PolicyV"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:10SandboxSDK9setPolicyySbSS_AA0D0VtF",
+        "mangledName": "$s10SandboxSDK9setPolicyySbSS_AA0D0VtF",
+        "moduleName": "SandboxSDK",
+        "declAttributes": [
+          "AccessControl",
+          "DiscardableResult",
+          "RawDocComment"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "setPolicies",
+        "printedName": "setPolicies(_:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Bool",
+            "printedName": "Swift.Bool",
+            "usr": "s:Sb"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "Dictionary",
+            "printedName": "[Swift.String : SandboxSDK.Policy]",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Policy",
+                "printedName": "SandboxSDK.Policy",
+                "usr": "s:10SandboxSDK6PolicyV"
+              }
+            ],
+            "usr": "s:SD"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:10SandboxSDK11setPoliciesySbSDySSAA6PolicyVGF",
+        "mangledName": "$s10SandboxSDK11setPoliciesySbSDySSAA6PolicyVGF",
+        "moduleName": "SandboxSDK",
+        "declAttributes": [
+          "AccessControl",
+          "DiscardableResult"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FeatureCategory",
+        "printedName": "FeatureCategory",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "Native",
+            "printedName": "Native",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SandboxSDK.FeatureCategory.Type) -> SandboxSDK.FeatureCategory",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FeatureCategory",
+                    "printedName": "SandboxSDK.FeatureCategory",
+                    "usr": "s:10SandboxSDK15FeatureCategoryO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SandboxSDK.FeatureCategory.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FeatureCategory",
+                        "printedName": "SandboxSDK.FeatureCategory",
+                        "usr": "s:10SandboxSDK15FeatureCategoryO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10SandboxSDK15FeatureCategoryO6NativeyA2CmF",
+            "mangledName": "$s10SandboxSDK15FeatureCategoryO6NativeyA2CmF",
+            "moduleName": "SandboxSDK"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SandboxSDK.FeatureCategory?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FeatureCategory",
+                    "printedName": "SandboxSDK.FeatureCategory",
+                    "usr": "s:10SandboxSDK15FeatureCategoryO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10SandboxSDK15FeatureCategoryO8rawValueACSgSS_tcfc",
+            "mangledName": "$s10SandboxSDK15FeatureCategoryO8rawValueACSgSS_tcfc",
+            "moduleName": "SandboxSDK",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10SandboxSDK15FeatureCategoryO8rawValueSSvp",
+            "mangledName": "$s10SandboxSDK15FeatureCategoryO8rawValueSSvp",
+            "moduleName": "SandboxSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SandboxSDK15FeatureCategoryO8rawValueSSvg",
+                "mangledName": "$s10SandboxSDK15FeatureCategoryO8rawValueSSvg",
+                "moduleName": "SandboxSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:10SandboxSDK15FeatureCategoryO",
+        "mangledName": "$s10SandboxSDK15FeatureCategoryO",
+        "moduleName": "SandboxSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CapabilityType",
+        "printedName": "CapabilityType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "UIAccess",
+            "printedName": "UIAccess",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SandboxSDK.CapabilityType.Type) -> SandboxSDK.CapabilityType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CapabilityType",
+                    "printedName": "SandboxSDK.CapabilityType",
+                    "usr": "s:10SandboxSDK14CapabilityTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SandboxSDK.CapabilityType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CapabilityType",
+                        "printedName": "SandboxSDK.CapabilityType",
+                        "usr": "s:10SandboxSDK14CapabilityTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10SandboxSDK14CapabilityTypeO8UIAccessyA2CmF",
+            "mangledName": "$s10SandboxSDK14CapabilityTypeO8UIAccessyA2CmF",
+            "moduleName": "SandboxSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "AudioOutput",
+            "printedName": "AudioOutput",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SandboxSDK.CapabilityType.Type) -> SandboxSDK.CapabilityType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CapabilityType",
+                    "printedName": "SandboxSDK.CapabilityType",
+                    "usr": "s:10SandboxSDK14CapabilityTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SandboxSDK.CapabilityType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CapabilityType",
+                        "printedName": "SandboxSDK.CapabilityType",
+                        "usr": "s:10SandboxSDK14CapabilityTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10SandboxSDK14CapabilityTypeO11AudioOutputyA2CmF",
+            "mangledName": "$s10SandboxSDK14CapabilityTypeO11AudioOutputyA2CmF",
+            "moduleName": "SandboxSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "Bluetooth",
+            "printedName": "Bluetooth",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SandboxSDK.CapabilityType.Type) -> SandboxSDK.CapabilityType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CapabilityType",
+                    "printedName": "SandboxSDK.CapabilityType",
+                    "usr": "s:10SandboxSDK14CapabilityTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SandboxSDK.CapabilityType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CapabilityType",
+                        "printedName": "SandboxSDK.CapabilityType",
+                        "usr": "s:10SandboxSDK14CapabilityTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10SandboxSDK14CapabilityTypeO9BluetoothyA2CmF",
+            "mangledName": "$s10SandboxSDK14CapabilityTypeO9BluetoothyA2CmF",
+            "moduleName": "SandboxSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "NFC",
+            "printedName": "NFC",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SandboxSDK.CapabilityType.Type) -> SandboxSDK.CapabilityType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CapabilityType",
+                    "printedName": "SandboxSDK.CapabilityType",
+                    "usr": "s:10SandboxSDK14CapabilityTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SandboxSDK.CapabilityType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CapabilityType",
+                        "printedName": "SandboxSDK.CapabilityType",
+                        "usr": "s:10SandboxSDK14CapabilityTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10SandboxSDK14CapabilityTypeO3NFCyA2CmF",
+            "mangledName": "$s10SandboxSDK14CapabilityTypeO3NFCyA2CmF",
+            "moduleName": "SandboxSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "Network",
+            "printedName": "Network",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SandboxSDK.CapabilityType.Type) -> SandboxSDK.CapabilityType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CapabilityType",
+                    "printedName": "SandboxSDK.CapabilityType",
+                    "usr": "s:10SandboxSDK14CapabilityTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SandboxSDK.CapabilityType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CapabilityType",
+                        "printedName": "SandboxSDK.CapabilityType",
+                        "usr": "s:10SandboxSDK14CapabilityTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10SandboxSDK14CapabilityTypeO7NetworkyA2CmF",
+            "mangledName": "$s10SandboxSDK14CapabilityTypeO7NetworkyA2CmF",
+            "moduleName": "SandboxSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "DeviceControl",
+            "printedName": "DeviceControl",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SandboxSDK.CapabilityType.Type) -> SandboxSDK.CapabilityType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CapabilityType",
+                    "printedName": "SandboxSDK.CapabilityType",
+                    "usr": "s:10SandboxSDK14CapabilityTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SandboxSDK.CapabilityType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CapabilityType",
+                        "printedName": "SandboxSDK.CapabilityType",
+                        "usr": "s:10SandboxSDK14CapabilityTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10SandboxSDK14CapabilityTypeO13DeviceControlyA2CmF",
+            "mangledName": "$s10SandboxSDK14CapabilityTypeO13DeviceControlyA2CmF",
+            "moduleName": "SandboxSDK"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SandboxSDK.CapabilityType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CapabilityType",
+                    "printedName": "SandboxSDK.CapabilityType",
+                    "usr": "s:10SandboxSDK14CapabilityTypeO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10SandboxSDK14CapabilityTypeO8rawValueACSgSS_tcfc",
+            "mangledName": "$s10SandboxSDK14CapabilityTypeO8rawValueACSgSS_tcfc",
+            "moduleName": "SandboxSDK",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10SandboxSDK14CapabilityTypeO8rawValueSSvp",
+            "mangledName": "$s10SandboxSDK14CapabilityTypeO8rawValueSSvp",
+            "moduleName": "SandboxSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SandboxSDK14CapabilityTypeO8rawValueSSvg",
+                "mangledName": "$s10SandboxSDK14CapabilityTypeO8rawValueSSvg",
+                "moduleName": "SandboxSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:10SandboxSDK14CapabilityTypeO",
+        "mangledName": "$s10SandboxSDK14CapabilityTypeO",
+        "moduleName": "SandboxSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Primitive",
+        "printedName": "Primitive",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "MobileUI",
+            "printedName": "MobileUI",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SandboxSDK.Primitive.Type) -> (Swift.String, Swift.String?) -> SandboxSDK.Primitive",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String, Swift.String?) -> SandboxSDK.Primitive",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Primitive",
+                        "printedName": "SandboxSDK.Primitive",
+                        "usr": "s:10SandboxSDK9PrimitiveO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(page: Swift.String, component: Swift.String?)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "Swift.String?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SandboxSDK.Primitive.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Primitive",
+                        "printedName": "SandboxSDK.Primitive",
+                        "usr": "s:10SandboxSDK9PrimitiveO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10SandboxSDK9PrimitiveO8MobileUIyACSS_SSSgtcACmF",
+            "mangledName": "$s10SandboxSDK9PrimitiveO8MobileUIyACSS_SSSgtcACmF",
+            "moduleName": "SandboxSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "ShowDialog",
+            "printedName": "ShowDialog",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SandboxSDK.Primitive.Type) -> (Swift.String, Swift.String) -> SandboxSDK.Primitive",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String, Swift.String) -> SandboxSDK.Primitive",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Primitive",
+                        "printedName": "SandboxSDK.Primitive",
+                        "usr": "s:10SandboxSDK9PrimitiveO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(title: Swift.String, message: Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SandboxSDK.Primitive.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Primitive",
+                        "printedName": "SandboxSDK.Primitive",
+                        "usr": "s:10SandboxSDK9PrimitiveO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10SandboxSDK9PrimitiveO10ShowDialogyACSS_SStcACmF",
+            "mangledName": "$s10SandboxSDK9PrimitiveO10ShowDialogyACSS_SStcACmF",
+            "moduleName": "SandboxSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "NetworkOp",
+            "printedName": "NetworkOp",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SandboxSDK.Primitive.Type) -> (Swift.String, Swift.String) -> SandboxSDK.Primitive",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String, Swift.String) -> SandboxSDK.Primitive",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Primitive",
+                        "printedName": "SandboxSDK.Primitive",
+                        "usr": "s:10SandboxSDK9PrimitiveO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(url: Swift.String, method: Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SandboxSDK.Primitive.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Primitive",
+                        "printedName": "SandboxSDK.Primitive",
+                        "usr": "s:10SandboxSDK9PrimitiveO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10SandboxSDK9PrimitiveO9NetworkOpyACSS_SStcACmF",
+            "mangledName": "$s10SandboxSDK9PrimitiveO9NetworkOpyACSS_SStcACmF",
+            "moduleName": "SandboxSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "PlayAudio",
+            "printedName": "PlayAudio",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SandboxSDK.Primitive.Type) -> (Swift.String, Swift.Int) -> SandboxSDK.Primitive",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String, Swift.Int) -> SandboxSDK.Primitive",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Primitive",
+                        "printedName": "SandboxSDK.Primitive",
+                        "usr": "s:10SandboxSDK9PrimitiveO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(source: Swift.String, volume: Swift.Int)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SandboxSDK.Primitive.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Primitive",
+                        "printedName": "SandboxSDK.Primitive",
+                        "usr": "s:10SandboxSDK9PrimitiveO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10SandboxSDK9PrimitiveO9PlayAudioyACSS_SitcACmF",
+            "mangledName": "$s10SandboxSDK9PrimitiveO9PlayAudioyACSS_SitcACmF",
+            "moduleName": "SandboxSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "BluetoothScan",
+            "printedName": "BluetoothScan",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SandboxSDK.Primitive.Type) -> SandboxSDK.Primitive",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Primitive",
+                    "printedName": "SandboxSDK.Primitive",
+                    "usr": "s:10SandboxSDK9PrimitiveO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SandboxSDK.Primitive.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Primitive",
+                        "printedName": "SandboxSDK.Primitive",
+                        "usr": "s:10SandboxSDK9PrimitiveO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10SandboxSDK9PrimitiveO13BluetoothScanyA2CmF",
+            "mangledName": "$s10SandboxSDK9PrimitiveO13BluetoothScanyA2CmF",
+            "moduleName": "SandboxSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "NfcReadTag",
+            "printedName": "NfcReadTag",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SandboxSDK.Primitive.Type) -> SandboxSDK.Primitive",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Primitive",
+                    "printedName": "SandboxSDK.Primitive",
+                    "usr": "s:10SandboxSDK9PrimitiveO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SandboxSDK.Primitive.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Primitive",
+                        "printedName": "SandboxSDK.Primitive",
+                        "usr": "s:10SandboxSDK9PrimitiveO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10SandboxSDK9PrimitiveO10NfcReadTagyA2CmF",
+            "mangledName": "$s10SandboxSDK9PrimitiveO10NfcReadTagyA2CmF",
+            "moduleName": "SandboxSDK"
+          },
+          {
+            "kind": "Function",
+            "name": "toDictionary",
+            "printedName": "toDictionary()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SandboxSDK9PrimitiveO12toDictionarySDySSypGyF",
+            "mangledName": "$s10SandboxSDK9PrimitiveO12toDictionarySDySSypGyF",
+            "moduleName": "SandboxSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:10SandboxSDK9PrimitiveO",
+        "mangledName": "$s10SandboxSDK9PrimitiveO",
+        "moduleName": "SandboxSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Feature",
+        "printedName": "Feature",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "name",
+            "printedName": "name",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10SandboxSDK7FeatureV4nameSSvp",
+            "mangledName": "$s10SandboxSDK7FeatureV4nameSSvp",
+            "moduleName": "SandboxSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SandboxSDK7FeatureV4nameSSvg",
+                "mangledName": "$s10SandboxSDK7FeatureV4nameSSvg",
+                "moduleName": "SandboxSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "category",
+            "printedName": "category",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FeatureCategory",
+                "printedName": "SandboxSDK.FeatureCategory",
+                "usr": "s:10SandboxSDK15FeatureCategoryO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10SandboxSDK7FeatureV8categoryAA0C8CategoryOvp",
+            "mangledName": "$s10SandboxSDK7FeatureV8categoryAA0C8CategoryOvp",
+            "moduleName": "SandboxSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FeatureCategory",
+                    "printedName": "SandboxSDK.FeatureCategory",
+                    "usr": "s:10SandboxSDK15FeatureCategoryO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SandboxSDK7FeatureV8categoryAA0C8CategoryOvg",
+                "mangledName": "$s10SandboxSDK7FeatureV8categoryAA0C8CategoryOvg",
+                "moduleName": "SandboxSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "path",
+            "printedName": "path",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10SandboxSDK7FeatureV4pathSSvp",
+            "mangledName": "$s10SandboxSDK7FeatureV4pathSSvp",
+            "moduleName": "SandboxSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SandboxSDK7FeatureV4pathSSvg",
+                "mangledName": "$s10SandboxSDK7FeatureV4pathSSvg",
+                "moduleName": "SandboxSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "requiredCapabilities",
+            "printedName": "requiredCapabilities",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[SandboxSDK.CapabilityType]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CapabilityType",
+                    "printedName": "SandboxSDK.CapabilityType",
+                    "usr": "s:10SandboxSDK14CapabilityTypeO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10SandboxSDK7FeatureV20requiredCapabilitiesSayAA14CapabilityTypeOGvp",
+            "mangledName": "$s10SandboxSDK7FeatureV20requiredCapabilitiesSayAA14CapabilityTypeOGvp",
+            "moduleName": "SandboxSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[SandboxSDK.CapabilityType]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CapabilityType",
+                        "printedName": "SandboxSDK.CapabilityType",
+                        "usr": "s:10SandboxSDK14CapabilityTypeO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SandboxSDK7FeatureV20requiredCapabilitiesSayAA14CapabilityTypeOGvg",
+                "mangledName": "$s10SandboxSDK7FeatureV20requiredCapabilitiesSayAA14CapabilityTypeOGvg",
+                "moduleName": "SandboxSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "primitives",
+            "printedName": "primitives",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[SandboxSDK.Primitive]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Primitive",
+                    "printedName": "SandboxSDK.Primitive",
+                    "usr": "s:10SandboxSDK9PrimitiveO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10SandboxSDK7FeatureV10primitivesSayAA9PrimitiveOGvp",
+            "mangledName": "$s10SandboxSDK7FeatureV10primitivesSayAA9PrimitiveOGvp",
+            "moduleName": "SandboxSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[SandboxSDK.Primitive]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Primitive",
+                        "printedName": "SandboxSDK.Primitive",
+                        "usr": "s:10SandboxSDK9PrimitiveO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SandboxSDK7FeatureV10primitivesSayAA9PrimitiveOGvg",
+                "mangledName": "$s10SandboxSDK7FeatureV10primitivesSayAA9PrimitiveOGvg",
+                "moduleName": "SandboxSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(name:category:path:requiredCapabilities:primitives:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Feature",
+                "printedName": "SandboxSDK.Feature",
+                "usr": "s:10SandboxSDK7FeatureV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FeatureCategory",
+                "printedName": "SandboxSDK.FeatureCategory",
+                "usr": "s:10SandboxSDK15FeatureCategoryO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[SandboxSDK.CapabilityType]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CapabilityType",
+                    "printedName": "SandboxSDK.CapabilityType",
+                    "usr": "s:10SandboxSDK14CapabilityTypeO"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[SandboxSDK.Primitive]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Primitive",
+                    "printedName": "SandboxSDK.Primitive",
+                    "usr": "s:10SandboxSDK9PrimitiveO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10SandboxSDK7FeatureV4name8category4path20requiredCapabilities10primitivesACSS_AA0C8CategoryOSSSayAA14CapabilityTypeOGSayAA9PrimitiveOGtcfc",
+            "mangledName": "$s10SandboxSDK7FeatureV4name8category4path20requiredCapabilities10primitivesACSS_AA0C8CategoryOSSSayAA14CapabilityTypeOGSayAA9PrimitiveOGtcfc",
+            "moduleName": "SandboxSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:10SandboxSDK7FeatureV",
+        "mangledName": "$s10SandboxSDK7FeatureV",
+        "moduleName": "SandboxSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Function",
+        "name": "registerFeature",
+        "printedName": "registerFeature(_:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Bool",
+            "printedName": "Swift.Bool",
+            "usr": "s:Sb"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "Feature",
+            "printedName": "SandboxSDK.Feature",
+            "usr": "s:10SandboxSDK7FeatureV"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:10SandboxSDK15registerFeatureySbAA0D0VF",
+        "mangledName": "$s10SandboxSDK15registerFeatureySbAA0D0VF",
+        "moduleName": "SandboxSDK",
+        "declAttributes": [
+          "AccessControl",
+          "DiscardableResult",
+          "RawDocComment"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "applyManifest",
+        "printedName": "applyManifest(features:policies:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Bool",
+            "printedName": "Swift.Bool",
+            "usr": "s:Sb"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "Array",
+            "printedName": "[SandboxSDK.Feature]",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Feature",
+                "printedName": "SandboxSDK.Feature",
+                "usr": "s:10SandboxSDK7FeatureV"
+              }
+            ],
+            "usr": "s:Sa"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "Dictionary",
+            "printedName": "[Swift.String : SandboxSDK.Policy]",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Policy",
+                "printedName": "SandboxSDK.Policy",
+                "usr": "s:10SandboxSDK6PolicyV"
+              }
+            ],
+            "hasDefaultArg": true,
+            "usr": "s:SD"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:10SandboxSDK13applyManifest8features8policiesSbSayAA7FeatureVG_SDySSAA6PolicyVGtF",
+        "mangledName": "$s10SandboxSDK13applyManifest8features8policiesSbSayAA7FeatureVG_SDySSAA6PolicyVGtF",
         "moduleName": "SandboxSDK",
         "declAttributes": [
           "AccessControl",
@@ -4430,6 +7406,20 @@
       "filePath": "\/Users\/runner\/work\/finclip-sandbox\/finclip-sandbox\/sandbox\/ios\/SandboxSDK\/Sources\/SandboxSDK\/Sandbox.swift",
       "kind": "Dictionary",
       "offset": 4067,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/finclip-sandbox\/finclip-sandbox\/sandbox\/ios\/SandboxSDK\/Sources\/SandboxSDK\/Sandbox.swift",
+      "kind": "Dictionary",
+      "offset": 10525,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/finclip-sandbox\/finclip-sandbox\/sandbox\/ios\/SandboxSDK\/Sources\/SandboxSDK\/Sandbox.swift",
+      "kind": "Dictionary",
+      "offset": 11089,
       "length": 3,
       "value": "[]"
     },

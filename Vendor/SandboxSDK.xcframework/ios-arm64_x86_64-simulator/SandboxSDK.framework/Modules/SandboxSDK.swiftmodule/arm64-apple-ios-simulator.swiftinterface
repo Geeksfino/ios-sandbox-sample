@@ -63,6 +63,96 @@ public func applyManifest(_ manifest: [Swift.String : Any]) -> Swift.Bool
 public func registerFeature(_ feature: [Swift.String : Any]) -> Swift.Bool
 @discardableResult
 public func setPolicies(_ policies: [Swift.String : Any]) -> Swift.Bool
+public enum Sensitivity : Swift.String, Swift.Codable {
+  case low, medium, high
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum RateUnit : Swift.String, Swift.Codable {
+  case minute, day
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct RateLimit : Swift.Codable {
+  public let unit: SandboxSDK.RateUnit
+  public let max: Swift.Int
+  public init(unit: SandboxSDK.RateUnit, max: Swift.Int)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Policy : Swift.Codable {
+  public var requiresUserPresent: Swift.Bool?
+  public var requiresExplicitConsent: Swift.Bool?
+  public var sensitivity: SandboxSDK.Sensitivity?
+  public var rateLimit: SandboxSDK.RateLimit?
+  public init(requiresUserPresent: Swift.Bool? = nil, requiresExplicitConsent: Swift.Bool? = nil, sensitivity: SandboxSDK.Sensitivity? = nil, rateLimit: SandboxSDK.RateLimit? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension SandboxSDK.SandboxCore {
+  @discardableResult
+  public static func setPolicy(_ featureId: Swift.String, _ policy: SandboxSDK.Policy) -> Swift.Bool
+  @discardableResult
+  public static func setPolicies(_ policies: [Swift.String : SandboxSDK.Policy]) -> Swift.Bool
+}
+@discardableResult
+public func setPolicy(_ featureId: Swift.String, _ policy: SandboxSDK.Policy) -> Swift.Bool
+@discardableResult
+public func setPolicies(_ policies: [Swift.String : SandboxSDK.Policy]) -> Swift.Bool
+public enum FeatureCategory : Swift.String, Swift.Codable {
+  case Native
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum CapabilityType : Swift.String, Swift.Codable {
+  case UIAccess
+  case AudioOutput
+  case Bluetooth
+  case NFC
+  case Network
+  case DeviceControl
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum Primitive {
+  case MobileUI(page: Swift.String, component: Swift.String?)
+  case ShowDialog(title: Swift.String, message: Swift.String)
+  case NetworkOp(url: Swift.String, method: Swift.String)
+  case PlayAudio(source: Swift.String, volume: Swift.Int)
+  case BluetoothScan
+  case NfcReadTag
+  public func toDictionary() -> [Swift.String : Any]
+}
+public struct Feature {
+  public let name: Swift.String
+  public let category: SandboxSDK.FeatureCategory
+  public let path: Swift.String
+  public let requiredCapabilities: [SandboxSDK.CapabilityType]
+  public let primitives: [SandboxSDK.Primitive]
+  public init(name: Swift.String, category: SandboxSDK.FeatureCategory, path: Swift.String, requiredCapabilities: [SandboxSDK.CapabilityType], primitives: [SandboxSDK.Primitive])
+}
+extension SandboxSDK.SandboxCore {
+  @discardableResult
+  public static func registerFeature(_ feature: SandboxSDK.Feature) -> Swift.Bool
+  @discardableResult
+  public static func applyManifest(features: [SandboxSDK.Feature], policies: [Swift.String : SandboxSDK.Policy] = [:]) -> Swift.Bool
+}
+@discardableResult
+public func registerFeature(_ feature: SandboxSDK.Feature) -> Swift.Bool
+@discardableResult
+public func applyManifest(features: [SandboxSDK.Feature], policies: [Swift.String : SandboxSDK.Policy] = [:]) -> Swift.Bool
 extension SandboxSDK.SandboxCore {
   public static func getPerformanceSummary() throws -> SandboxSDK.PerformanceSummary
   public static func getPerformanceHistory() throws -> [SandboxSDK.ExecutionRecord]
@@ -161,6 +251,18 @@ public func updateCapability(_ capabilityId: Swift.String, scope: SandboxSDK.Cap
 extension SandboxSDK.DecisionStatus : Swift.Equatable {}
 extension SandboxSDK.DecisionStatus : Swift.Hashable {}
 extension SandboxSDK.DecisionStatus : Swift.RawRepresentable {}
+extension SandboxSDK.Sensitivity : Swift.Equatable {}
+extension SandboxSDK.Sensitivity : Swift.Hashable {}
+extension SandboxSDK.Sensitivity : Swift.RawRepresentable {}
+extension SandboxSDK.RateUnit : Swift.Equatable {}
+extension SandboxSDK.RateUnit : Swift.Hashable {}
+extension SandboxSDK.RateUnit : Swift.RawRepresentable {}
+extension SandboxSDK.FeatureCategory : Swift.Equatable {}
+extension SandboxSDK.FeatureCategory : Swift.Hashable {}
+extension SandboxSDK.FeatureCategory : Swift.RawRepresentable {}
+extension SandboxSDK.CapabilityType : Swift.Equatable {}
+extension SandboxSDK.CapabilityType : Swift.Hashable {}
+extension SandboxSDK.CapabilityType : Swift.RawRepresentable {}
 extension SandboxSDK.AlertType : Swift.Equatable {}
 extension SandboxSDK.AlertType : Swift.Hashable {}
 extension SandboxSDK.AlertType : Swift.RawRepresentable {}
