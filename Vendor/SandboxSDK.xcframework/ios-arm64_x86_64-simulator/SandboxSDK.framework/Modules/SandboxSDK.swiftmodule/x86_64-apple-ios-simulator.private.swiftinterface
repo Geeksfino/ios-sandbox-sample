@@ -13,8 +13,50 @@ public enum SandboxError : Swift.Error, Swift.CustomStringConvertible {
     get
   }
 }
+public struct GrantSpec : Swift.Codable {
+  public let featureNames: [Swift.String]
+  public init(featureNames: [Swift.String])
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension SandboxSDK.SandboxCore {
+  public static func createGrant(featureNames: [Swift.String]) -> Foundation.UUID?
+  public static func listGrantIds() -> [Foundation.UUID]
+  public static func revokeGrant(_ id: Foundation.UUID) -> Swift.Bool
+  public static func context(with grants: [SandboxSDK.GrantSpec], base: [Swift.String : Any]? = nil) -> [Swift.String : Any]
+}
+extension SandboxSDK.SandboxCore {
+  public static func evaluateFeatureAsync(_ name: Swift.String, args: [Swift.String : Any] = [:], context: [Swift.String : Any]? = nil) async throws -> SandboxSDK.PolicyDecision
+  public static func recordUsageAsync(_ name: Swift.String) async throws -> SandboxSDK.OkResponse
+}
+public struct PartialPolicy : Swift.Codable {
+  public var requiresUserPresent: Swift.Bool?
+  public var requiresExplicitConsent: Swift.Bool?
+  public var sensitivity: SandboxSDK.Sensitivity?
+  public var rateLimit: SandboxSDK.RateLimit?
+  public init(requiresUserPresent: Swift.Bool? = nil, requiresExplicitConsent: Swift.Bool? = nil, sensitivity: SandboxSDK.Sensitivity? = nil, rateLimit: SandboxSDK.RateLimit? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension SandboxSDK.SandboxCore {
+  @discardableResult
+  public static func unregisterFeature(_ featureId: Swift.String) -> Swift.Bool
+  public static func listFeatureIds() -> [Swift.String]
+  public static func getPolicy(_ featureId: Swift.String) -> SandboxSDK.Policy?
+  public static func listPolicies() -> [Swift.String : SandboxSDK.Policy]
+  @discardableResult
+  public static func updatePolicy(_ featureId: Swift.String, partial: SandboxSDK.PartialPolicy) -> Swift.Bool
+}
 public enum DecisionStatus : Swift.String, Swift.Decodable {
   case allowed, ask, denied, rateLimited
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum DecisionErrorType : Swift.String, Swift.Decodable {
+  case UnknownFeature, MissingCapability, UserNotPresent, ConsentRequired, NoGrant, RateLimited
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
@@ -25,6 +67,7 @@ public struct PolicyDecision : Swift.Decodable {
   public let status: SandboxSDK.DecisionStatus
   public let reason: Swift.String?
   public let reset_at: Swift.Int64?
+  public let error: SandboxSDK.DecisionErrorType?
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct OkResponse : Swift.Decodable {
@@ -88,6 +131,8 @@ extension SandboxSDK.SandboxCore {
   public static func setPolicy(_ featureId: Swift.String, _ policy: SandboxSDK.Policy) -> Swift.Bool
   @discardableResult
   public static func setPolicies(_ policies: [Swift.String : SandboxSDK.Policy]) -> Swift.Bool
+  @discardableResult
+  public static func setPolicies(_ entries: [(SandboxSDK.Feature, SandboxSDK.Policy)]) -> Swift.Bool
 }
 @discardableResult
 public func setPolicy(_ featureId: Swift.String, _ policy: SandboxSDK.Policy) -> Swift.Bool
@@ -124,12 +169,14 @@ public enum Primitive {
   public func toDictionary() -> [Swift.String : Any]
 }
 public struct Feature {
+  public let id: Swift.String
   public let name: Swift.String
   public let category: SandboxSDK.FeatureCategory
   public let path: Swift.String
   public let requiredCapabilities: [SandboxSDK.CapabilityType]
   public let primitives: [SandboxSDK.Primitive]
   public init(name: Swift.String, category: SandboxSDK.FeatureCategory, path: Swift.String, requiredCapabilities: [SandboxSDK.CapabilityType], primitives: [SandboxSDK.Primitive])
+  public init(id: Swift.String, name: Swift.String, category: SandboxSDK.FeatureCategory, path: Swift.String, requiredCapabilities: [SandboxSDK.CapabilityType], primitives: [SandboxSDK.Primitive])
 }
 extension SandboxSDK.SandboxCore {
   @discardableResult
@@ -239,6 +286,9 @@ public func updateCapability(_ capabilityId: Swift.String, scope: SandboxSDK.Cap
 extension SandboxSDK.DecisionStatus : Swift.Equatable {}
 extension SandboxSDK.DecisionStatus : Swift.Hashable {}
 extension SandboxSDK.DecisionStatus : Swift.RawRepresentable {}
+extension SandboxSDK.DecisionErrorType : Swift.Equatable {}
+extension SandboxSDK.DecisionErrorType : Swift.Hashable {}
+extension SandboxSDK.DecisionErrorType : Swift.RawRepresentable {}
 extension SandboxSDK.Sensitivity : Swift.Equatable {}
 extension SandboxSDK.Sensitivity : Swift.Hashable {}
 extension SandboxSDK.Sensitivity : Swift.RawRepresentable {}
