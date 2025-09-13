@@ -41,12 +41,6 @@ public enum SandboxCore {
   public static func clearAuditLog()
   @discardableResult
   public static func updateResourceLimits(_ limits: [Swift.String : Any]) throws -> SandboxSDK.OkResponse
-  @discardableResult
-  public static func applyManifest(_ manifest: [Swift.String : Any]) -> Swift.Bool
-  @discardableResult
-  public static func registerFeature(_ feature: [Swift.String : Any]) -> Swift.Bool
-  @discardableResult
-  public static func setPolicies(_ policies: [Swift.String : Any]) -> Swift.Bool
 }
 @discardableResult
 public func initialize() -> Swift.Bool
@@ -57,12 +51,6 @@ public func getAuditLog() throws -> [[Swift.String : Any]]
 public func clearAuditLog()
 @discardableResult
 public func updateResourceLimits(_ limits: [Swift.String : Any]) throws -> SandboxSDK.OkResponse
-@discardableResult
-public func applyManifest(_ manifest: [Swift.String : Any]) -> Swift.Bool
-@discardableResult
-public func registerFeature(_ feature: [Swift.String : Any]) -> Swift.Bool
-@discardableResult
-public func setPolicies(_ policies: [Swift.String : Any]) -> Swift.Bool
 public enum Sensitivity : Swift.String, Swift.Codable {
   case low, medium, high
   public init?(rawValue: Swift.String)

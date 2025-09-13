@@ -1038,135 +1038,6 @@
           },
           {
             "kind": "Function",
-            "name": "applyManifest",
-            "printedName": "applyManifest(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Dictionary",
-                "printedName": "[Swift.String : Any]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ProtocolComposition",
-                    "printedName": "Any"
-                  }
-                ],
-                "usr": "s:SD"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:10SandboxSDK0A4CoreO13applyManifestySbSDySSypGFZ",
-            "mangledName": "$s10SandboxSDK0A4CoreO13applyManifestySbSDySSypGFZ",
-            "moduleName": "SandboxSDK",
-            "static": true,
-            "declAttributes": [
-              "AccessControl",
-              "DiscardableResult",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "registerFeature",
-            "printedName": "registerFeature(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Dictionary",
-                "printedName": "[Swift.String : Any]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ProtocolComposition",
-                    "printedName": "Any"
-                  }
-                ],
-                "usr": "s:SD"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:10SandboxSDK0A4CoreO15registerFeatureySbSDySSypGFZ",
-            "mangledName": "$s10SandboxSDK0A4CoreO15registerFeatureySbSDySSypGFZ",
-            "moduleName": "SandboxSDK",
-            "static": true,
-            "declAttributes": [
-              "AccessControl",
-              "DiscardableResult",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "setPolicies",
-            "printedName": "setPolicies(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Dictionary",
-                "printedName": "[Swift.String : Any]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ProtocolComposition",
-                    "printedName": "Any"
-                  }
-                ],
-                "usr": "s:SD"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:10SandboxSDK0A4CoreO11setPoliciesySbSDySSypGFZ",
-            "mangledName": "$s10SandboxSDK0A4CoreO11setPoliciesySbSDySSypGFZ",
-            "moduleName": "SandboxSDK",
-            "static": true,
-            "declAttributes": [
-              "AccessControl",
-              "DiscardableResult",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
             "name": "setPolicy",
             "printedName": "setPolicy(_:_:)",
             "children": [
@@ -1768,129 +1639,6 @@
           "DiscardableResult"
         ],
         "throwing": true,
-        "funcSelfKind": "NonMutating"
-      },
-      {
-        "kind": "Function",
-        "name": "applyManifest",
-        "printedName": "applyManifest(_:)",
-        "children": [
-          {
-            "kind": "TypeNominal",
-            "name": "Bool",
-            "printedName": "Swift.Bool",
-            "usr": "s:Sb"
-          },
-          {
-            "kind": "TypeNominal",
-            "name": "Dictionary",
-            "printedName": "[Swift.String : Any]",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "ProtocolComposition",
-                "printedName": "Any"
-              }
-            ],
-            "usr": "s:SD"
-          }
-        ],
-        "declKind": "Func",
-        "usr": "s:10SandboxSDK13applyManifestySbSDySSypGF",
-        "mangledName": "$s10SandboxSDK13applyManifestySbSDySSypGF",
-        "moduleName": "SandboxSDK",
-        "declAttributes": [
-          "AccessControl",
-          "DiscardableResult"
-        ],
-        "funcSelfKind": "NonMutating"
-      },
-      {
-        "kind": "Function",
-        "name": "registerFeature",
-        "printedName": "registerFeature(_:)",
-        "children": [
-          {
-            "kind": "TypeNominal",
-            "name": "Bool",
-            "printedName": "Swift.Bool",
-            "usr": "s:Sb"
-          },
-          {
-            "kind": "TypeNominal",
-            "name": "Dictionary",
-            "printedName": "[Swift.String : Any]",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "ProtocolComposition",
-                "printedName": "Any"
-              }
-            ],
-            "usr": "s:SD"
-          }
-        ],
-        "declKind": "Func",
-        "usr": "s:10SandboxSDK15registerFeatureySbSDySSypGF",
-        "mangledName": "$s10SandboxSDK15registerFeatureySbSDySSypGF",
-        "moduleName": "SandboxSDK",
-        "declAttributes": [
-          "AccessControl",
-          "DiscardableResult"
-        ],
-        "funcSelfKind": "NonMutating"
-      },
-      {
-        "kind": "Function",
-        "name": "setPolicies",
-        "printedName": "setPolicies(_:)",
-        "children": [
-          {
-            "kind": "TypeNominal",
-            "name": "Bool",
-            "printedName": "Swift.Bool",
-            "usr": "s:Sb"
-          },
-          {
-            "kind": "TypeNominal",
-            "name": "Dictionary",
-            "printedName": "[Swift.String : Any]",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "ProtocolComposition",
-                "printedName": "Any"
-              }
-            ],
-            "usr": "s:SD"
-          }
-        ],
-        "declKind": "Func",
-        "usr": "s:10SandboxSDK11setPoliciesySbSDySSypGF",
-        "mangledName": "$s10SandboxSDK11setPoliciesySbSDySSypGF",
-        "moduleName": "SandboxSDK",
-        "declAttributes": [
-          "AccessControl",
-          "DiscardableResult"
-        ],
         "funcSelfKind": "NonMutating"
       },
       {
@@ -7405,21 +7153,21 @@
     {
       "filePath": "\/Users\/runner\/work\/finclip-sandbox\/finclip-sandbox\/sandbox\/ios\/SandboxSDK\/Sources\/SandboxSDK\/Sandbox.swift",
       "kind": "Dictionary",
-      "offset": 4067,
+      "offset": 2926,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/finclip-sandbox\/finclip-sandbox\/sandbox\/ios\/SandboxSDK\/Sources\/SandboxSDK\/Sandbox.swift",
       "kind": "Dictionary",
-      "offset": 10525,
+      "offset": 9385,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/finclip-sandbox\/finclip-sandbox\/sandbox\/ios\/SandboxSDK\/Sources\/SandboxSDK\/Sandbox.swift",
       "kind": "Dictionary",
-      "offset": 11089,
+      "offset": 10045,
       "length": 3,
       "value": "[]"
     },

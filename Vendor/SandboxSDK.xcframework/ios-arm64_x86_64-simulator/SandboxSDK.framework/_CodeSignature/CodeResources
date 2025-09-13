@@ -14,19 +14,19 @@
 		</data>
 		<key>Modules/SandboxSDK.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		WzjlM1iRj+94I3HFpHyzAAfzVVA=
+		OKVsl98krKJp2aZzVXE4Sqa+JGo=
 		</data>
 		<key>Modules/SandboxSDK.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		mcWPADIpcwdpdtrWVjOV4X3HjMk=
+		Lu9DP0F2sPkJ/aBMfKJowDDFeqw=
 		</data>
 		<key>Modules/SandboxSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		4zi/rybuuf0pF6l1ADWw57WIC+8=
+		Jl8QhyshQa7SU4XhJ7N5sCcK7vc=
 		</data>
 		<key>Modules/SandboxSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		oOjLIjd5wml1+thC5hqZJT3QXd4=
+		iO1E3uPgWHhsocAaez6HihnF2+4=
 		</data>
 		<key>Modules/SandboxSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -34,19 +34,19 @@
 		</data>
 		<key>Modules/SandboxSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		oOjLIjd5wml1+thC5hqZJT3QXd4=
+		iO1E3uPgWHhsocAaez6HihnF2+4=
 		</data>
 		<key>Modules/SandboxSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Vs7rwe1sNHbZDlJf8+qGNmDQr64=
+		o79UVAcaVv60ImezTCaR3FLwKlY=
 		</data>
 		<key>Modules/SandboxSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		4zi/rybuuf0pF6l1ADWw57WIC+8=
+		Jl8QhyshQa7SU4XhJ7N5sCcK7vc=
 		</data>
 		<key>Modules/SandboxSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		gMZF48uRhnIUJEoIqGrltQRSDDU=
+		sPkj96Jg8vvNcd2GPgQKslE0UTE=
 		</data>
 		<key>Modules/SandboxSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -54,11 +54,11 @@
 		</data>
 		<key>Modules/SandboxSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		gMZF48uRhnIUJEoIqGrltQRSDDU=
+		sPkj96Jg8vvNcd2GPgQKslE0UTE=
 		</data>
 		<key>Modules/SandboxSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		5vnQc0YFr1k8+8X4Az0AePqZa7c=
+		GfxUxlEZuLkHLWM5kZEeLNY/1NY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -78,28 +78,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ieC6JEdnift/B2b3a6GrpaacJ8z2Zvp8XzY6eIi6MvU=
+			9FlSbhBCzegg58gsbqZNbWjJAxLfZf6o4iC4+IXSC7Y=
 			</data>
 		</dict>
 		<key>Modules/SandboxSDK.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YPVwtsB9eha4K+6YFiBll5mTUJA3IStKAjr/PLvsu0w=
+			YXzorlDPlKTw+xZG9BUQCXXnV5ntIXjB2eQaBoFH4+s=
 			</data>
 		</dict>
 		<key>Modules/SandboxSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LaXbUSD3i9RPHAgqMnJ8UivFQOqQcKIk63mnVYkfyFg=
+			BinLvt4DMeTgbuRJ9XZWe5OtyPa1uKbWMzNfVV9l9/E=
 			</data>
 		</dict>
 		<key>Modules/SandboxSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			TvrjhCNJezwtReBsa/+IIIlQD4cRDEYvHMCd8zeFBeM=
+			ny3iOIDrzKIdOW2QAr+GzWmEenjXbvCI5p62h06AMyI=
 			</data>
 		</dict>
 		<key>Modules/SandboxSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -113,28 +113,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			TvrjhCNJezwtReBsa/+IIIlQD4cRDEYvHMCd8zeFBeM=
+			ny3iOIDrzKIdOW2QAr+GzWmEenjXbvCI5p62h06AMyI=
 			</data>
 		</dict>
 		<key>Modules/SandboxSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			av/BkmufbZ50hv752rKyJZMyRaiuRK0AcjJ82+nBBdQ=
+			JtAaPwmY7GyWYMh+rld9I+6X/fX2n3i8WtSsPz++WGA=
 			</data>
 		</dict>
 		<key>Modules/SandboxSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LaXbUSD3i9RPHAgqMnJ8UivFQOqQcKIk63mnVYkfyFg=
+			BinLvt4DMeTgbuRJ9XZWe5OtyPa1uKbWMzNfVV9l9/E=
 			</data>
 		</dict>
 		<key>Modules/SandboxSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rAi5Y8vkc2iQNLptoyakT6YQuoXGYiElV0MH0vjJvYY=
+			1QVMT8fr/ntur88RW+xGR9TOgW0OK/hwxyht7SFY8D8=
 			</data>
 		</dict>
 		<key>Modules/SandboxSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -148,14 +148,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rAi5Y8vkc2iQNLptoyakT6YQuoXGYiElV0MH0vjJvYY=
+			1QVMT8fr/ntur88RW+xGR9TOgW0OK/hwxyht7SFY8D8=
 			</data>
 		</dict>
 		<key>Modules/SandboxSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vzmfdG2ca0oUeg8U1iA8WYjHgxPfXoyDfGCByw10H5A=
+			gYtBvXvxEGYc1G/OGZ/Hc4CjOWDGzPbFsRSz2P+pHFc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
