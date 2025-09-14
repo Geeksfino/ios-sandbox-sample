@@ -210,7 +210,7 @@ Troubleshooting:
 - API availability errors for `alert(...actions:message:)` / `confirmationDialog(...)` mean your deployment target is below iOS 15. Bump it to iOS 15 in `project.yml`.
 
 ## SDK Build Information
-- **Version**: e60fb7f
-- **Built from**: [e60fb7f489ea80a933928977d08c089326764637](https://github.com/Geeksfino/finclip-sandbox/commit/e60fb7f489ea80a933928977d08c089326764637)
-- **Build date**: Sat Sep 13 12:31:22 UTC 2025
+- **Version**: 667902b
+- **Built from**: [667902b4056104f0843a12cb9215224dc67d1836](https://github.com/Geeksfino/finclip-sandbox/commit/667902b4056104f0843a12cb9215224dc67d1836)
+- **Build date**: Sun Sep 14 03:35:12 UTC 2025
 
