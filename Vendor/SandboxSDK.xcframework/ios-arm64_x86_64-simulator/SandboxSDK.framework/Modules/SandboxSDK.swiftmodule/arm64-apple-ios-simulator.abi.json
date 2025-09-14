@@ -16162,35 +16162,35 @@
     {
       "filePath": "\/Users\/runner\/work\/finclip-sandbox\/finclip-sandbox\/sandbox\/ios\/SandboxSDK\/Sources\/SandboxSDK\/SandboxCore.swift",
       "kind": "StringLiteral",
-      "offset": 2573,
+      "offset": 2576,
       "length": 9,
       "value": "\"allowed\""
     },
     {
       "filePath": "\/Users\/runner\/work\/finclip-sandbox\/finclip-sandbox\/sandbox\/ios\/SandboxSDK\/Sources\/SandboxSDK\/SandboxCore.swift",
       "kind": "StringLiteral",
-      "offset": 2598,
+      "offset": 2601,
       "length": 5,
       "value": "\"ask\""
     },
     {
       "filePath": "\/Users\/runner\/work\/finclip-sandbox\/finclip-sandbox\/sandbox\/ios\/SandboxSDK\/Sources\/SandboxSDK\/SandboxCore.swift",
       "kind": "StringLiteral",
-      "offset": 2623,
+      "offset": 2626,
       "length": 8,
       "value": "\"denied\""
     },
     {
       "filePath": "\/Users\/runner\/work\/finclip-sandbox\/finclip-sandbox\/sandbox\/ios\/SandboxSDK\/Sources\/SandboxSDK\/SandboxCore.swift",
       "kind": "StringLiteral",
-      "offset": 2655,
+      "offset": 2658,
       "length": 14,
       "value": "\"rate_limited\""
     },
     {
       "filePath": "\/Users\/runner\/work\/finclip-sandbox\/finclip-sandbox\/sandbox\/ios\/SandboxSDK\/Sources\/SandboxSDK\/SandboxCore.swift",
       "kind": "Dictionary",
-      "offset": 5278,
+      "offset": 5281,
       "length": 3,
       "value": "[]"
     },
@@ -16211,49 +16211,49 @@
     {
       "filePath": "\/Users\/runner\/work\/finclip-sandbox\/finclip-sandbox\/sandbox\/ios\/SandboxSDK\/Sources\/SandboxSDK\/SandboxObservability.swift",
       "kind": "StringLiteral",
-      "offset": 3484,
+      "offset": 3629,
       "length": 13,
       "value": "\"HighLatency\""
     },
     {
       "filePath": "\/Users\/runner\/work\/finclip-sandbox\/finclip-sandbox\/sandbox\/ios\/SandboxSDK\/Sources\/SandboxSDK\/SandboxObservability.swift",
       "kind": "StringLiteral",
-      "offset": 3525,
+      "offset": 3670,
       "length": 17,
       "value": "\"HighMemoryUsage\""
     },
     {
       "filePath": "\/Users\/runner\/work\/finclip-sandbox\/finclip-sandbox\/sandbox\/ios\/SandboxSDK\/Sources\/SandboxSDK\/SandboxObservability.swift",
       "kind": "StringLiteral",
-      "offset": 3567,
+      "offset": 3712,
       "length": 14,
       "value": "\"HighCpuUsage\""
     },
     {
       "filePath": "\/Users\/runner\/work\/finclip-sandbox\/finclip-sandbox\/sandbox\/ios\/SandboxSDK\/Sources\/SandboxSDK\/SandboxObservability.swift",
       "kind": "StringLiteral",
-      "offset": 3607,
+      "offset": 3752,
       "length": 15,
       "value": "\"HighErrorRate\""
     },
     {
       "filePath": "\/Users\/runner\/work\/finclip-sandbox\/finclip-sandbox\/sandbox\/ios\/SandboxSDK\/Sources\/SandboxSDK\/SandboxObservability.swift",
       "kind": "StringLiteral",
-      "offset": 3653,
+      "offset": 3798,
       "length": 20,
       "value": "\"ResourceExhaustion\""
     },
     {
       "filePath": "\/Users\/runner\/work\/finclip-sandbox\/finclip-sandbox\/sandbox\/ios\/SandboxSDK\/Sources\/SandboxSDK\/SandboxObservability.swift",
       "kind": "StringLiteral",
-      "offset": 4298,
+      "offset": 4443,
       "length": 6,
       "value": "\"Full\""
     },
     {
       "filePath": "\/Users\/runner\/work\/finclip-sandbox\/finclip-sandbox\/sandbox\/ios\/SandboxSDK\/Sources\/SandboxSDK\/SandboxObservability.swift",
       "kind": "StringLiteral",
-      "offset": 4327,
+      "offset": 4472,
       "length": 12,
       "value": "\"Restricted\""
     }
